@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import 'tailwindcss/tailwind.css'
 
 const LinkButton = ({ link, name }) => {
 	return (

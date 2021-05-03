@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
-import Navbar from '../pages-lib/shared/navbar'
-import LinkButton from '../pages-lib/shared/linkButton'
-import FeatureBox from '../pages-lib/home/featureBox'
+import Navbar from '../components/shared/navbar'
+import LinkButton from '../components/shared/linkButton'
+import FeatureBox from '../components/home/featureBox'
 import { ArrowCircleRightIcon, SearchIcon, CheckIcon } from '@heroicons/react/outline'
 
 export default function Example() {
