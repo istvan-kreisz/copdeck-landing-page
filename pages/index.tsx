@@ -3,6 +3,8 @@ import Navbar from '../components/shared/navbar'
 import LinkButton from '../components/shared/linkButton'
 import FeatureBox from '../components/home/featureBox'
 import { ArrowCircleRightIcon, SearchIcon, CheckIcon } from '@heroicons/react/outline'
+import { Disclosure } from '@headlessui/react'
+import { ChevronUpIcon } from '@heroicons/react/solid'
 
 export default function Example() {
 	return (
@@ -56,8 +58,8 @@ export default function Example() {
 				</section>
 				<section className="relative mt-10" id="features">
 					<img className="w-screen" src="/images/wave1_o.svg" alt="" />
-					<div className="w-screen  bg-blue-600">
-						<h2 className="text-white text-center mb-16 mt-0 text-3xl sm:text-4xl">
+					<div className="w-screen -mt-1  bg-blue-600">
+						<h2 className="text-white text-center mb-16 text-3xl sm:text-4xl">
 							Check out these features
 						</h2>
 						<div className="container-default grid grid-cols-3 gap-6 gap-y-10 justify-center">
@@ -158,7 +160,7 @@ export default function Example() {
 									charSet="utf-8"
 								></script>
 							</div>
-							<div className="mt-10 ml-16">
+							<div className="lg:mt-10 lg:ml-16 md:mt-5 md:ml-8">
 								<blockquote className="twitter-tweet tw-align-center">
 									<p lang="en" dir="ltr">
 										God is so good 😊 Today I am voting for the first time in my
@@ -176,7 +178,7 @@ export default function Example() {
 									charSet="utf-8"
 								></script>
 							</div>
-							<div className="mt-2">
+							<div className="md:mt-2">
 								<blockquote className="twitter-tweet tw-align-center">
 									<p lang="en" dir="ltr">
 										God is so good 😊 Today I am voting for the first time in my
@@ -194,7 +196,7 @@ export default function Example() {
 									charSet="utf-8"
 								></script>
 							</div>
-							<div className="mt-10">
+							<div className="lg:mt-10 md:mt-5">
 								<blockquote className="twitter-tweet tw-align-center">
 									<p lang="en" dir="ltr">
 										A major part of real-world AI has to be solved to make
@@ -212,6 +214,87 @@ export default function Example() {
 									src="https://platform.twitter.com/widgets.js"
 									charSet="utf-8"
 								></script>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section className="relative mt-24" id="features">
+					<div className="w-screen  bg-blue-600">
+						<div className="container-default grid grid-cols-2 gap-24 justify-center items-center py-24">
+							<div className="flex flex-col justify-center items-start">
+								<h2 className="text-white text-left mb-4 text-3xl sm:text-4xl">
+									Got questions? We've got answers.
+								</h2>
+								<p className="text-white font-medium text-left leading-relaxed tracking-wider font-regular">
+									This is a big one and i consider it one of the most important
+									things for a designer to get right.
+								</p>
+							</div>
+
+							<div className="flex flex-col space-y-4">
+								<Disclosure>
+									{({ open }) => (
+										<>
+											<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left text-gray-600 bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
+												<div className="flex flex-row w-full justify-between items-center">
+													<span>What is your refund policy?</span>
+													<ChevronUpIcon
+														className={`${
+															open ? 'transform rotate-180' : ''
+														} w-8 h-8 text-blue-600`}
+													/>
+												</div>
+												<Disclosure.Panel className="pt-4 pb-2 text-sm text-gray-500">
+													If you're unhappy with your purchase for any
+													reason, email us within 90 days and we'll refund
+													you in full, no questions asked.
+												</Disclosure.Panel>
+											</Disclosure.Button>
+										</>
+									)}
+								</Disclosure>
+								<Disclosure>
+									{({ open }) => (
+										<>
+											<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left text-gray-600 bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
+												<div className="flex flex-row w-full justify-between items-center">
+													<span>What is your refund policy?</span>
+													<ChevronUpIcon
+														className={`${
+															open ? 'transform rotate-180' : ''
+														} w-8 h-8 text-blue-600`}
+													/>
+												</div>
+												<Disclosure.Panel className="pt-4 pb-2 text-sm text-gray-500">
+													If you're unhappy with your purchase for any
+													reason, email us within 90 days and we'll refund
+													you in full, no questions asked.
+												</Disclosure.Panel>
+											</Disclosure.Button>
+										</>
+									)}
+								</Disclosure>
+								<Disclosure>
+									{({ open }) => (
+										<>
+											<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left text-gray-600 bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
+												<div className="flex flex-row w-full justify-between items-center">
+													<span>What is your refund policy?</span>
+													<ChevronUpIcon
+														className={`${
+															open ? 'transform rotate-180' : ''
+														} w-8 h-8 text-blue-600`}
+													/>
+												</div>
+												<Disclosure.Panel className="pt-4 pb-2 text-sm text-gray-500">
+													If you're unhappy with your purchase for any
+													reason, email us within 90 days and we'll refund
+													you in full, no questions asked.
+												</Disclosure.Panel>
+											</Disclosure.Button>
+										</>
+									)}
+								</Disclosure>
 							</div>
 						</div>
 					</div>
