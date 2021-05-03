@@ -1,12 +1,17 @@
 /* This example requires Tailwind CSS v2.0+ */
 import Navbar from '../components/shared/navbar'
 import LinkButton from '../components/shared/linkButton'
+import Button from '../components/shared/button'
 import FeatureBox from '../components/home/featureBox'
 import { ArrowCircleRightIcon, SearchIcon, CheckIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 
 export default function Example() {
+	const signupClicked = () => {
+		console.log('clicked')
+	}
+
 	return (
 		<div>
 			<header>
@@ -62,7 +67,7 @@ export default function Example() {
 						<h2 className="text-white text-center mb-16 text-3xl sm:text-4xl">
 							Check out these features
 						</h2>
-						<div className="container-default grid grid-cols-3 gap-6 gap-y-10 justify-center">
+						<div className="container-default grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-10 place-items-center">
 							<FeatureBox
 								title="Search sneakers"
 								description="Better a diamond with a flaw than a pebble without one."
@@ -316,11 +321,40 @@ export default function Example() {
 							<h4 className="font-semibold text-4xl tracking-wider mb-6">
 								Milan Lengyeltoti
 							</h4>
-							<p className="font-regular text-left leading-relaxed tracking-wider font-regular">
+							<p className="font-regular text-left leading-relaxed tracking-wider ">
 								Here goes the founder’s note about why this is the best thing since
 								sliced bread and why you’re passionate about this project. To learn
 								more about us, visit the About page.{' '}
 							</p>
+						</div>
+					</div>
+				</section>
+				<section className="relative mt-24" id="contact">
+					<div className="w-screen  bg-blue-600">
+						<div className="container-default flex flex-col text-center justify-center items-center py-16 md:py-24">
+							<h3 className="text-base mb-6 font-semibold uppercase text-yellow-500 tracking-widest">
+								Follow our journey
+							</h3>
+							<h4 className="text-white font-semibold text-4xl tracking-wider mb-6">
+								Want some updates?
+							</h4>
+							<p className="max-w-md font-regular text-white leading-relaxed tracking-wider mb-6">
+								CopDeck is not publicly available yet, but rest assured we’re hard
+								at work to change that. If you want to get exlusive updates about
+								the product join our mailing list{' '}
+							</p>
+							<form
+								className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-6"
+								action="submit"
+							>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									className="w-80 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+								/>
+								<Button name="Sign me up!" clicked={signupClicked}></Button>
+							</form>
 						</div>
 					</div>
 				</section>
