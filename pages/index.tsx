@@ -132,7 +132,7 @@ export default function Example() {
 					</div>
 					<img className="w-full" src="/images/wave2_o.svg" alt="" />
 				</section>
-				<section className="relative mt-10" id="testimonials">
+				<section className="relative mt-4" id="testimonials">
 					<div className="container-default text-center mx-auto">
 						<h2 className="text-center mb-8 mt-0 text-3xl sm:text-4xl">Testimonials</h2>
 						<p className="text-center max-w-sm mx-auto font-semibold text-base">
@@ -220,12 +220,12 @@ export default function Example() {
 				</section>
 				<section className="relative mt-24" id="features">
 					<div className="w-screen  bg-blue-600">
-						<div className="container-default grid grid-cols-2 gap-24 justify-center items-center py-24">
-							<div className="flex flex-col justify-center items-start">
-								<h2 className="text-white text-left mb-4 text-3xl sm:text-4xl">
+						<div className="container-default grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 justify-center items-center py-16 md:py-24">
+							<div className="flex flex-col justify-center items-center md:items-start">
+								<h2 className="text-white text-center md:text-left mb-4 text-3xl sm:text-4xl">
 									Got questions? We've got answers.
 								</h2>
-								<p className="text-white font-medium text-left leading-relaxed tracking-wider font-regular">
+								<p className="text-white font-medium text-center md:text-left leading-relaxed tracking-wider font-regular">
 									This is a big one and i consider it one of the most important
 									things for a designer to get right.
 								</p>
@@ -296,6 +296,31 @@ export default function Example() {
 									)}
 								</Disclosure>
 							</div>
+						</div>
+					</div>
+				</section>
+				<section className="container-default relative mt-16" id="mission">
+					<h2 className="text-center mb-4 text-3xl sm:text-4xl">Our mission</h2>
+
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 justify-center items-center my-16 lg:my-24">
+						<img
+							className="object-cover  object-center rounded justify-self-center"
+							alt="hero"
+							src="https://dummyimage.com/355x520"
+						/>
+
+						<div className="flex flex-col items-center md:items-start">
+							<h3 className="text-base mb-6 font-semibold uppercase text-blue-500 tracking-widest">
+								Co-Founder & Marketing guru
+							</h3>
+							<h4 className="font-semibold text-4xl tracking-wider mb-6">
+								Milan Lengyeltoti
+							</h4>
+							<p className="font-regular text-left leading-relaxed tracking-wider font-regular">
+								Here goes the founder’s note about why this is the best thing since
+								sliced bread and why you’re passionate about this project. To learn
+								more about us, visit the About page.{' '}
+							</p>
 						</div>
 					</div>
 				</section>
