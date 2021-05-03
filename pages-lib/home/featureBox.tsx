@@ -1,3 +1,5 @@
+import 'tailwindcss/tailwind.css'
+
 const FeatureBox = ({ title, description, children }) => {
 	return (
 		<div className="flex flex-col max-w-xs items-center">
