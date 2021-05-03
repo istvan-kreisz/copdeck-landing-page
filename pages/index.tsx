@@ -130,6 +130,92 @@ export default function Example() {
 					</div>
 					<img className="w-full" src="/images/wave2_o.svg" alt="" />
 				</section>
+				<section className="relative mt-10" id="testimonials">
+					<div className="container-default text-center mx-auto">
+						<h2 className="text-center mb-8 mt-0 text-3xl sm:text-4xl">Testimonials</h2>
+						<p className="text-center max-w-sm mx-auto font-semibold text-base">
+							If you like us, send a tweet with our twitter handle{' '}
+							<span className=" text-blue-600">@CopDeck</span> and we may feature your
+							tweet here!
+						</p>
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10">
+							<div>
+								<blockquote className="twitter-tweet tw-align-center">
+									<p lang="en" dir="ltr">
+										A major part of real-world AI has to be solved to make
+										unsupervised, generalized full self-driving work, as the
+										entire road system is designed for biological neural nets
+										with optical imagers
+									</p>
+									&mdash; Elon Musk (@elonmusk){' '}
+									<a href="https://twitter.com/elonmusk/status/1387901003664699392?ref_src=twsrc%5Etfw">
+										April 29, 2021
+									</a>
+								</blockquote>{' '}
+								<script
+									async
+									src="https://platform.twitter.com/widgets.js"
+									charSet="utf-8"
+								></script>
+							</div>
+							<div className="mt-10 ml-16">
+								<blockquote className="twitter-tweet tw-align-center">
+									<p lang="en" dir="ltr">
+										God is so good 😊 Today I am voting for the first time in my
+										life for the President of the United States, and it&#39;s
+										for someone I truly trust...me. 🇺🇸 🕊
+									</p>
+									&mdash; ye (@kanyewest){' '}
+									<a href="https://twitter.com/kanyewest/status/1323641120778145792?ref_src=twsrc%5Etfw">
+										November 3, 2020
+									</a>
+								</blockquote>{' '}
+								<script
+									async
+									src="https://platform.twitter.com/widgets.js"
+									charSet="utf-8"
+								></script>
+							</div>
+							<div className="mt-2">
+								<blockquote className="twitter-tweet tw-align-center">
+									<p lang="en" dir="ltr">
+										God is so good 😊 Today I am voting for the first time in my
+										life for the President of the United States, and it&#39;s
+										for someone I truly trust...me. 🇺🇸 🕊
+									</p>
+									&mdash; ye (@kanyewest){' '}
+									<a href="https://twitter.com/kanyewest/status/1323641120778145792?ref_src=twsrc%5Etfw">
+										November 3, 2020
+									</a>
+								</blockquote>{' '}
+								<script
+									async
+									src="https://platform.twitter.com/widgets.js"
+									charSet="utf-8"
+								></script>
+							</div>
+							<div className="mt-10">
+								<blockquote className="twitter-tweet tw-align-center">
+									<p lang="en" dir="ltr">
+										A major part of real-world AI has to be solved to make
+										unsupervised, generalized full self-driving work, as the
+										entire road system is designed for biological neural nets
+										with optical imagers
+									</p>
+									&mdash; Elon Musk (@elonmusk){' '}
+									<a href="https://twitter.com/elonmusk/status/1387901003664699392?ref_src=twsrc%5Etfw">
+										April 29, 2021
+									</a>
+								</blockquote>{' '}
+								<script
+									async
+									src="https://platform.twitter.com/widgets.js"
+									charSet="utf-8"
+								></script>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 		</div>
 	)
