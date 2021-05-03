@@ -1,7 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
 import Navbar from '../pages-lib/shared/navbar'
 import LinkButton from '../pages-lib/shared/linkButton'
-import { ArrowCircleRightIcon } from '@heroicons/react/outline'
+import FeatureBox from '../pages-lib/home/featureBox'
+import { ArrowCircleRightIcon, SearchIcon, CheckIcon } from '@heroicons/react/outline'
 
 export default function Example() {
 	return (
@@ -9,8 +10,8 @@ export default function Example() {
 			<header>
 				<Navbar></Navbar>
 			</header>
-			<main className="container relative mx-auto max-w-7xl px-4 sm:px-6 mt-2 lg:mt-4">
-				<section className="text-gray-600 relative">
+			<main id="main">
+				<section className="container-default mt-2 lg:mt-4 text-gray-600">
 					<div className="relative  w-full flex  md:flex-row flex-col items-center justify-around">
 						<div className="flex flex-col items-center lg:pr-48 justify-center order-2 md:order-first lg:flex-grow w-full">
 							<img
@@ -52,6 +53,82 @@ export default function Example() {
 							</div>
 						</div>
 					</div>
+				</section>
+				<section className="relative mt-10" id="features">
+					<img className="w-screen" src="/images/wave1_o.svg" alt="" />
+					<div className="w-screen  bg-blue-600">
+						<h2 className="text-white text-center mb-16 mt-0 text-3xl sm:text-4xl">
+							Check out these features
+						</h2>
+						<div className="container-default grid grid-cols-3 gap-6 gap-y-10 justify-center">
+							<FeatureBox
+								title="Search sneakers"
+								description="Better a diamond with a flaw than a pebble without one."
+							>
+								<SearchIcon></SearchIcon>
+							</FeatureBox>
+							<FeatureBox
+								title="Search sneakers"
+								description="Better a diamond with a flaw than a pebble without one."
+							>
+								<SearchIcon></SearchIcon>
+							</FeatureBox>
+							<FeatureBox
+								title="Search sneakers"
+								description="Better a diamond with a flaw than a pebble without one."
+							>
+								<SearchIcon></SearchIcon>
+							</FeatureBox>
+							<div className="flex flex-col justify-center items-center">
+								<div className="flex flex-col p-6 border-yellow-500 border-2 rounded-lg">
+									<h4 className="text-white font-regular text-lg mb-3">
+										Summary
+									</h4>
+									<div className="flex flex-row justify-center items-center mb-3">
+										<CheckIcon className="text-white h-5 w-5"></CheckIcon>
+										<p className="ml-3 tracking-widest text-white">
+											Blah blah blah blah
+										</p>
+									</div>
+
+									<div className="flex flex-row justify-center items-center mb-3">
+										<CheckIcon className="text-white h-5 w-5"></CheckIcon>
+										<p className="ml-3 tracking-widest text-white">
+											Blah blah blah blah
+										</p>
+									</div>
+
+									<div className="flex flex-row justify-center items-center mb-3">
+										<CheckIcon className="text-white h-5 w-5"></CheckIcon>
+										<p className="ml-3 tracking-widest text-white">
+											Blah blah blah blah
+										</p>
+									</div>
+
+									<div className="flex flex-row justify-center items-center mb-3">
+										<CheckIcon className="text-white h-5 w-5"></CheckIcon>
+										<p className="ml-3 tracking-widest text-white">
+											Blah blah blah blah
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<FeatureBox
+								title="Search sneakers"
+								description="Better a diamond with a flaw than a pebble without one."
+							>
+								<SearchIcon></SearchIcon>
+							</FeatureBox>
+							<FeatureBox
+								title="Search sneakers"
+								description="Better a diamond with a flaw than a pebble without one."
+							>
+								<SearchIcon></SearchIcon>
+							</FeatureBox>
+						</div>
+					</div>
+					<img className="w-full" src="/images/wave2_o.svg" alt="" />
 				</section>
 			</main>
 		</div>
