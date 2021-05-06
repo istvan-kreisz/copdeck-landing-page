@@ -1,13 +1,7 @@
-/* This example requires Tailwind CSS v2.0+ */
-import LinkButton from '../components/shared/linkButton'
 import SocialIcons from '../components/shared/socialIcons'
 import Layout from '../components/shared/layout'
 
-export default function Example() {
-	const signupClicked = () => {
-		console.log('clicked')
-	}
-
+export default function About() {
 	return (
 		<Layout>
 			<section className="container-default mt-2 lg:mt-4 text-gray-600">

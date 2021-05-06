@@ -8,7 +8,7 @@ import { ArrowCircleRightIcon, SearchIcon, CheckIcon } from '@heroicons/react/ou
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 
-export default function Example() {
+export default function Home() {
 	const signupClicked = () => {
 		console.log('clicked')
 	}
