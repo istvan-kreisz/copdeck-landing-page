@@ -15,9 +15,9 @@ const Header = (props) => {
 		<header>
 			<Popover className="relative z-10 bg-white">
 				{({ open }) => (
-					<div className="max-w-7xl mx-auto">
-						<div className="relative mx-auto px-4 z-10 pb-8 bg-white sm:pb-20">
-							<div className="relative pt-8 px-4 sm:px-6 lg:px-8">
+					<div className="container-default">
+						<div className="relative mx-auto z-10 pb-8 bg-white sm:pb-20">
+							<div className="relative pt-8">
 								<nav
 									className="relative flex items-center justify-between sm:h-10"
 									aria-label="Global"

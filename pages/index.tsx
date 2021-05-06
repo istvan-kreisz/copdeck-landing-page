@@ -216,7 +216,7 @@ export default function Example() {
 					</div>
 				</div>
 			</section>
-			<section className="relative mt-24" id="features">
+			<section className="relative mt-24" id="q&a">
 				<div className="w-screen  bg-blue-600">
 					<div className="container-default grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 justify-center items-center py-16 md:py-24">
 						<div className="flex flex-col justify-center items-center md:items-start">
