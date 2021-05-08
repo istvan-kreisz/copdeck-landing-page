@@ -3,6 +3,7 @@ import SocialIcons from '../components/shared/socialIcons'
 import Button from '../components/shared/button'
 import FeatureBox from '../components/home/featureBox'
 import Layout from '../components/shared/layout'
+import Link from 'next/link'
 
 import { ArrowCircleRightIcon, SearchIcon, CheckIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'
@@ -23,22 +24,24 @@ export default function Home() {
 							alt="hero"
 							src="https://dummyimage.com/250x500"
 						/>
-						<a className="mt-12" href="/demo">
-							<div className="group flex flex-row content-center items-center mb-3">
-								<div className="flex flex-col content-center items-center">
-									<p className="group-hover:text-gray-900 text-base font-bold mb-2">
-										Try the demo!
-									</p>
-									<p className="group-hover:text-gray-900 text-xs">
-										Free & no signup!
-									</p>
+						<Link href="/demo">
+							<a className="mt-12">
+								<div className="group flex flex-row content-center items-center mb-3">
+									<div className="flex flex-col content-center items-center">
+										<p className="group-hover:text-gray-900 text-base font-bold mb-2">
+											Try the demo!
+										</p>
+										<p className="group-hover:text-gray-900 text-xs">
+											Free & no signup!
+										</p>
+									</div>
+									<ArrowCircleRightIcon
+										className="h-10 w-10 ml-3 text-green-400 group-hover:text-green-500"
+										aria-hidden="true"
+									></ArrowCircleRightIcon>
 								</div>
-								<ArrowCircleRightIcon
-									className="h-10 w-10 ml-3 text-green-400 group-hover:text-green-500"
-									aria-hidden="true"
-								></ArrowCircleRightIcon>
-							</div>
-						</a>
+							</a>
+						</Link>
 					</div>
 					<div className="ml-4 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
 						<h1 className="sm:text-4xl text-3xl mb-4 font-medium sm:leading-normal tracking-wide text-gray-900">

@@ -1,14 +1,17 @@
 import SocialIcons from './socialIcons'
+import Link from 'next/link'
 
 const Footer = (props) => {
 	return (
 		<footer className="container-default mt-auto">
 			<div className="px-5 pb-4 pt-10 flex justify-between mx-auto items-center">
-				<a className="flex items-center" href="/">
-					<span className="sr-only">Icon</span>
-					<img className="h-12 sm:h-16 w-auto " src="sneaker.png" />
-					<p className="ml-3 font-semibold text-base sm:text-lg">CopDeck</p>
-				</a>
+				<Link href="/">
+					<a className="flex items-center">
+						<span className="sr-only">Icon</span>
+						<img className="h-12 sm:h-16 w-auto " src="sneaker.png" />
+						<p className="ml-3 font-semibold text-base sm:text-lg">CopDeck</p>
+					</a>
+				</Link>
 				<SocialIcons></SocialIcons>
 			</div>
 
