@@ -75,9 +75,8 @@ const EmailSignupForm = () => {
 			className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-5"
 			action=""
 		>
-			<label htmlFor="email"></label>
 			<input
-				className={`w-80 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
+				className={`ml-0 w-80 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
 				ref={emailField}
 				placeholder="Type your email addess here"
 				type="email"

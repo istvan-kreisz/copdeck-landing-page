@@ -1,11 +1,8 @@
 import SocialIcons from '../components/shared/socialIcons'
-import Button from '../components/shared/button'
 import LinkButton from '../components/shared/linkButton'
 import EmailSignupForm from '../components/shared/emailSignupForm'
 import FeatureBox from '../components/home/featureBox'
 import Layout from '../components/shared/defaultLayout'
-import Link from 'next/link'
-import { useState } from 'react'
 
 import { ArrowCircleRightIcon, SearchIcon, CheckIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'

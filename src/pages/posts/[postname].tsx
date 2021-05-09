@@ -5,6 +5,7 @@ import styles from './post.module.css'
 import Link from 'next/link'
 import Footer from '../../components/shared/footer'
 import { ArrowLeftIcon } from '@heroicons/react/outline'
+import EmailSignupForm from '../../components/shared/emailSignupForm'
 
 export default function BlogPost({ frontmatter, markdownBody, postname }) {
 	return (
@@ -47,8 +48,13 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 				<ReactMarkdown className={styles.article} remarkPlugins={[gfm]}>
 					{markdownBody}
 				</ReactMarkdown>
+				<div className="bg-blue-600 my-20 rounded-3xl mx-auto flex flex-col space-y-8 items-center px-8 py-8 max-w-2xl">
+					<h3 className="text-white w-3/4 font-semibold text-xl m-0 text-center md:text-2xl leading-6">
+						Sign up to the newsletter for more sneaker reselling tips & tricks!
+					</h3>
+					<EmailSignupForm></EmailSignupForm>
+				</div>
 			</main>
-			<Footer></Footer>
 		</div>
 	)
 }
