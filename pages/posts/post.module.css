@@ -1,10 +1,10 @@
 .article {
-	margin-top: 4rem;
+	margin-top: 2rem;
 }
 
-@include min-width() {
+@media (min-width: 640px) {
 	.article {
-		margin-top: 7rem;
+		margin-top: 3rem;
 	}
 }
 
@@ -67,4 +67,21 @@
 	margin-top: 4rem;
 	display: block;
 	text-align: center;
+}
+
+.header {
+	position: relative;
+	height: 18rem;
+}
+
+@media (min-width: 640px) {
+	.header {
+		height: 24rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		height: 30rem;
+	}
 }

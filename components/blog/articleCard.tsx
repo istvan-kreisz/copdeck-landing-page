@@ -8,7 +8,7 @@ const ArticleCard = (props) => {
 			className="cursor-pointer group flex flex-col items-center md:items-start mb-6 md:mb-0"
 		>
 			<Link href="/posts/[postname]" as={`/posts/${props.slug}`}>
-				<a aria-label={'post ' + props.slug} className="max-w-xs sm:max-w-sm lg:max-w-md">
+				<a aria-label={`post ${props.slug}`} className="max-w-xs sm:max-w-sm lg:max-w-md">
 					<div className="relative">
 						<img
 							className="w-full object-cover object-center rounded-3xl justify-self-center"
@@ -23,17 +23,17 @@ const ArticleCard = (props) => {
 							></ArrowRightIcon>
 						</div>
 					</div>
-					<ul className="">
+					{/* <ul className="">
 						{props.tags.map((element) => {
 							return <li key={element}>{element}</li>
 						})}
-					</ul>
+					</ul> */}
 
 					<h3 className="font-medium text-xl tracking-wider mb-3 mt-6">{props.title}</h3>
 					<p className="font-normal text-left leading-relaxed tracking-wider line-clamp-2">
 						{props.description}
 					</p>
-					<p>{props.date}</p>
+					{/* <p>{props.date}</p> */}
 				</a>
 			</Link>
 		</li>

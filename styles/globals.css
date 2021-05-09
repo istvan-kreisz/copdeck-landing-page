@@ -15,7 +15,7 @@
 
 @layer components {
 	.container-default {
-		@apply container relative mx-auto max-w-7xl px-6 sm:px-10;
+		@apply container relative mx-auto max-w-7xl px-8 sm:px-14;
 	}
 
 	.btn-blue {

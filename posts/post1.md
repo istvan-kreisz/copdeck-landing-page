@@ -1,6 +1,6 @@
 ---
 title: 'My web development learning plan'
-description: ''
+description: 'Here goes some description'
 tags: [web]
 date: 'March 2020'
 ---
