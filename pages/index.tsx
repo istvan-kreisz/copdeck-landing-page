@@ -1,17 +1,23 @@
-import LinkButton from '../components/shared/linkButton'
 import SocialIcons from '../components/shared/socialIcons'
 import Button from '../components/shared/button'
+import LinkButton from '../components/shared/linkButton'
+import EmailSignupForm from '../components/shared/emailSignupForm'
 import FeatureBox from '../components/home/featureBox'
+import Popup from '../components/shared/popup'
 import Layout from '../components/shared/layout'
 import Link from 'next/link'
+import { useState } from 'react'
 
 import { ArrowCircleRightIcon, SearchIcon, CheckIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 
 export default function Home() {
+	const [openSignupPopup, setOpenSignupPopup] = useState(false)
+
 	const signupClicked = () => {
-		console.log('clicked')
+		console.log('sdsdsd')
+		setOpenSignupPopup(true)
 	}
 
 	return (
@@ -58,6 +64,7 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
+				<Popup open={openSignupPopup} setOpen={setOpenSignupPopup}></Popup>
 			</section>
 			<section className="relative mt-10" id="features">
 				<img className="w-screen" src="/images/wave1_o.svg" alt="" />
@@ -325,7 +332,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className="relative mt-24" id="contact">
+			<section className="relative mt-24" id="mailing-list">
 				<div className="w-screen  bg-blue-600">
 					<div className="container-default flex flex-col text-center justify-center items-center py-16 md:py-24">
 						<h3 className="text-base mb-6 font-semibold uppercase text-yellow-500 tracking-widest">
@@ -339,18 +346,7 @@ export default function Home() {
 							work to change that. If you want to get exlusive updates about the
 							product join our mailing list{' '}
 						</p>
-						<form
-							className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-6"
-							action="submit"
-						>
-							<input
-								type="email"
-								id="email"
-								name="email"
-								className="w-80 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-							/>
-							<Button name="Sign me up!" clicked={signupClicked}></Button>
-						</form>
+						<EmailSignupForm></EmailSignupForm>
 					</div>
 				</div>
 			</section>

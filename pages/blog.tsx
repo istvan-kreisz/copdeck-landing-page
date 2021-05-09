@@ -58,7 +58,11 @@ const Blog = ({ articles }) => {
 					<ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 content-center justify-center items-center my-12 lg:my-16">
 						{articlesList}
 					</ul>
-				) : null}
+				) : (
+					<h2 className="my-32 font-bold opacity-50 text-5xl text-gray-600 mx-auto text-center">
+						Coming soon!
+					</h2>
+				)}
 			</section>
 		</Layout>
 	)

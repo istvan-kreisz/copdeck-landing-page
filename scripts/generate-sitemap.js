@@ -22,6 +22,7 @@ async function generateSitemap() {
 		'src/posts/**/*{.jsx,.md}',
 		'!src/pages/_*.jsx',
 		'!src/pages/posts/**',
+		'!src/post-drafts/**',
 		'!src/pages/api',
 	])
 	const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

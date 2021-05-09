@@ -17,7 +17,7 @@ const Footer = (props) => {
 
 			<hr className="container-default border-blue-300 border-t-3" />
 			<p className="text-gray-500 py-6 mx-auto text-sm text-center">
-				Copyright © 2019 Kraft8. All Rights Reserved
+				Copyright © 2021 CopDeck. All Rights Reserved
 			</p>
 		</footer>
 	)
