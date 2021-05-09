@@ -30,7 +30,7 @@ export default function Home() {
 							alt="hero"
 							src="https://dummyimage.com/250x500"
 						/>
-						<Link href="/demo">
+						{/* <Link href="/demo">
 							<a className="mt-12">
 								<div className="group flex flex-row content-center items-center mb-3">
 									<div className="flex flex-col content-center items-center">
@@ -47,7 +47,7 @@ export default function Home() {
 									></ArrowCircleRightIcon>
 								</div>
 							</a>
-						</Link>
+						</Link> */}
 					</div>
 					<div className="ml-4 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
 						<h1 className="sm:text-4xl text-3xl mb-4 font-medium sm:leading-normal tracking-wide text-gray-900">
