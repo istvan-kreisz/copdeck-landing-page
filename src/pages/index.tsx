@@ -4,7 +4,7 @@ import LinkButton from '../components/shared/linkButton'
 import EmailSignupForm from '../components/shared/emailSignupForm'
 import FeatureBox from '../components/home/featureBox'
 import Popup from '../components/shared/popup'
-import Layout from '../components/shared/layout'
+import Layout from '../components/shared/defaultLayout'
 import Link from 'next/link'
 import { useState } from 'react'
 

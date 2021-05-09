@@ -1,4 +1,4 @@
-import Layout from '../components/shared/layout'
+import Layout from '../components/shared/defaultLayout'
 import Button from '../components/shared/button'
 
 export default function Contact() {

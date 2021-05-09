@@ -15,4 +15,8 @@
     <loc>undefined</loc>
     <changefreq>hourly</changefreq>
   </url>
+  <url>
+    <loc>undefined/posts/post1</loc>
+    <changefreq>hourly</changefreq>
+  </url>
 </urlset>

@@ -1,5 +1,5 @@
 import SocialIcons from '../components/shared/socialIcons'
-import Layout from '../components/shared/layout'
+import Layout from '../components/shared/defaultLayout'
 
 export default function About() {
 	return (

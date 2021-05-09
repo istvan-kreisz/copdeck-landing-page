@@ -1,5 +1,5 @@
 import ArticleCard from '../components/blog/articleCard'
-import Layout from '../components/shared/layout'
+import Layout from '../components/shared/defaultLayout'
 import matter from 'gray-matter'
 import { useState } from 'react'
 
