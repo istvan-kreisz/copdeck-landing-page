@@ -1,7 +1,40 @@
 import { useRef, useState } from 'react'
 import InputButton from './inputButton'
+import Popup from './popup'
 
 const EmailSignupForm = () => {
+	const [openSignupPopupConfig, setOpenSignupPopupConfig] = useState({
+		title: '',
+		message: '',
+		type: 'regular',
+		show: false,
+	})
+
+	const didSignUp = () => {
+		setOpenSignupPopupConfig({
+			title: 'Signup successful!',
+			message:
+				"Thanks for signing up and welcome to the CopDeck community! You'll receive your first email shortly.",
+			type: 'regular',
+			show: true,
+		})
+	}
+
+	const signupFailed = (error) => {
+		setOpenSignupPopupConfig({
+			title: 'Ooops!',
+			message: 'Something went wrong. Please try again.',
+			type: 'error',
+			show: true,
+		})
+	}
+
+	const closePopup = () => {
+		setOpenSignupPopupConfig((currentState) => {
+			return { ...currentState, show: false }
+		})
+	}
+
 	const emailField = useRef<HTMLInputElement>()
 
 	const sendClicked = (event) => {
@@ -11,32 +44,28 @@ const EmailSignupForm = () => {
 			return
 		}
 
-		console.log('asdsdsdsds')
-
-		fetch('/api/contact', {
+		fetch('/api/signup', {
 			method: 'POST',
 			mode: 'cors',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ email: email, message: 'yo' }),
+			body: JSON.stringify({ email: email }),
 		})
 			.then(async (response) => {
 				try {
-					console.log(response)
 					const data = await response.json()
-					console.log(data)
 					if (!data.error) {
-						console.log('great success')
+						didSignUp()
 					} else {
-						// failed
+						signupFailed(data.error)
 					}
 				} catch (error) {
-					// failed
+					signupFailed(error)
 				}
 			})
 			.catch((err) => {
-				// failed
+				signupFailed(err)
 			})
 	}
 
@@ -56,6 +85,13 @@ const EmailSignupForm = () => {
 				required
 			/>
 			<InputButton name="Sign me up!"></InputButton>
+			<Popup
+				title={openSignupPopupConfig.title}
+				message={openSignupPopupConfig.message}
+				open={openSignupPopupConfig.show}
+				close={closePopup}
+				style={openSignupPopupConfig.type}
+			></Popup>
 		</form>
 	)
 }

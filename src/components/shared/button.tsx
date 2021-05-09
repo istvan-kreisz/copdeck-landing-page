@@ -1,6 +1,9 @@
-const Button = ({ name, clicked }) => {
+const Button = ({ name, style, clicked }) => {
 	return (
-		<button onClick={clicked} className="button-default">
+		<button
+			onClick={clicked}
+			className={`button-default ${style === 'error' ? 'bg-red-500 hover:bg-red-600' : ''}`}
+		>
 			{name}
 		</button>
 	)

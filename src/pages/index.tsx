@@ -3,7 +3,6 @@ import Button from '../components/shared/button'
 import LinkButton from '../components/shared/linkButton'
 import EmailSignupForm from '../components/shared/emailSignupForm'
 import FeatureBox from '../components/home/featureBox'
-import Popup from '../components/shared/popup'
 import Layout from '../components/shared/defaultLayout'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -13,13 +12,6 @@ import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 
 export default function Home() {
-	const [openSignupPopup, setOpenSignupPopup] = useState(false)
-
-	const signupClicked = () => {
-		console.log('sdsdsd')
-		setOpenSignupPopup(true)
-	}
-
 	return (
 		<Layout>
 			<section className="container-default mt-2 lg:mt-4 text-gray-600">
@@ -64,7 +56,6 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<Popup open={openSignupPopup} setOpen={setOpenSignupPopup}></Popup>
 			</section>
 			<section className="relative mt-10" id="features">
 				<img className="w-screen" src="/images/wave1_o.svg" alt="" />
