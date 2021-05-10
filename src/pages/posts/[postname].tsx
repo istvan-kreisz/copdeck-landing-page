@@ -57,25 +57,29 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 				<div className="my-20 space-x-8 mx-auto flex flex-row justify-center items-center">
 					<div className="bg-gray-400 border-gray-400 border-t-2 flex-1"></div>
 					<p className="font-medium hidden sm:block">Click to share:</p>
-					<TwitterShareButton
-						title={frontmatter?.title}
-						via={'CopDeck'}
-						url={window.location.href}
-						// hashtags={['sneakers']}
-						resetButtonStyle={false}
-						className="focus:outline-none"
-					>
-						<img className="h-6" src="/images/twitter.svg" alt="" />
-					</TwitterShareButton>
-					<FacebookShareButton
-						quote={frontmatter?.title}
-						url={window.location.href}
-						hashtag="#copdeck"
-						resetButtonStyle={false}
-						className="focus:outline-none"
-					>
-						<img className="h-6" src="/images/facebook.svg" alt="" />
-					</FacebookShareButton>
+					{typeof window !== 'undefined' ? (
+						<TwitterShareButton
+							title={frontmatter?.title}
+							via={'CopDeck'}
+							url={window ? window?.location?.href : ''}
+							// hashtags={['sneakers']}
+							resetButtonStyle={false}
+							className="focus:outline-none"
+						>
+							<img className="h-6" src="/images/twitter.svg" alt="" />
+						</TwitterShareButton>
+					) : null}
+					{typeof window !== 'undefined' ? (
+						<FacebookShareButton
+							quote={frontmatter?.title}
+							url={window ? window?.location?.href : ''}
+							hashtag="#copdeck"
+							resetButtonStyle={false}
+							className="focus:outline-none"
+						>
+							<img className="h-6" src="/images/facebook.svg" alt="" />
+						</FacebookShareButton>
+					) : null}
 
 					<div className="bg-gray-400 border-gray-400 border-t-2 flex-1"></div>
 				</div>
