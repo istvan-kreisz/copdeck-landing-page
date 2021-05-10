@@ -29,10 +29,8 @@ const ArticleCard = (props) => {
 						})}
 					</ul> */}
 
-					<h3 className="font-medium text-xl tracking-wider mb-3 mt-6">{props.title}</h3>
-					<p className="font-normal text-left leading-relaxed tracking-wider line-clamp-2">
-						{props.description}
-					</p>
+					<h3 className="text-xl mb-3 mt-6">{props.title}</h3>
+					<p className="text-left line-clamp-2">{props.description}</p>
 					{/* <p>{props.date}</p> */}
 				</a>
 			</Link>

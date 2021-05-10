@@ -64,28 +64,24 @@ export default function Home() {
 						</Link> */}
 					</div>
 					<div className="ml-4 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-						<h1 className="sm:text-4xl text-3xl mb-4 font-medium sm:leading-normal tracking-wide">
-							Sneaker reselling made easy.
-						</h1>
-						<p className="mb-8 font-regular sm:mb-20">
+						<h1 className="mb-4">Sneaker reselling made easy.</h1>
+						<p className="mb-12 sm:mb-20">
 							Ditch the spreadsheet. Price comparison, inventory management, price
 							alerts and a built in buy & sell feed.
 						</p>
 						<p className="text-xs mb-3">To get exclusive updates about updates:</p>
 						<LinkButton link="#mailing-list" name="Join our mailing list"></LinkButton>
-						<div className="mt-16">
+						<div className="mt-12">
 							<SocialIcons></SocialIcons>
 						</div>
 					</div>
 				</div>
 			</section>
 			<section className="relative mt-10" id="features">
-				<img className="w-screen" src="/images/wave1_o.svg" alt="" />
-				<div className="w-screen -mt-1  bg-theme-blue">
-					<h2 className="text-white text-center mb-16 text-3xl sm:text-4xl">
-						Check out these features
-					</h2>
-					<div className="container-default grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-10 place-items-center">
+				<img className="w-screen" src="/images/wave1_o.png" alt="" />
+				<div className="w-screen -mt-1 lg:-mt-10 py-10 sm:pt-0 bg-theme-blue">
+					<h2 className="text-white text-center mb-16">Check out these features</h2>
+					<div className="container-default grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-12 sm:gap-y-10 place-items-center">
 						<FeatureBox
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
@@ -156,17 +152,17 @@ export default function Home() {
 						</FeatureBox>
 					</div>
 				</div>
-				<img className="w-full" src="/images/wave2_o.svg" alt="" />
+				<img className="w-full" src="/images/wave2_o.png" alt="" />
 			</section>
 			<section className="relative mt-4" id="testimonials">
 				<div className="container-default text-center mx-auto">
-					<h2 className="text-center mb-8 mt-0 text-3xl sm:text-4xl">Testimonials</h2>
-					<p className="text-center max-w-sm mx-auto font-semibold text-base">
+					<h2 className="text-center mb-6 mt-6">Testimonials</h2>
+					<p className="text-center max-w-sm mx-auto">
 						If you like us, send a tweet with our twitter handle{' '}
 						<span className="text-theme-blue">@CopDeck</span> and we may feature your
 						tweet here!
 					</p>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-8 sm:mt-24">
 						<div>
 							<blockquote className="twitter-tweet tw-align-center">
 								<p lang="en" dir="ltr">
@@ -248,10 +244,10 @@ export default function Home() {
 				<div className="w-screen  bg-theme-blue">
 					<div className="container-default grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 justify-center items-center py-16 md:py-24">
 						<div className="flex flex-col justify-center items-center md:items-start">
-							<h2 className="text-white text-center md:text-left mb-4 text-3xl sm:text-4xl">
+							<h2 className="text-white text-center md:text-left mb-4">
 								Got questions? We've got answers.
 							</h2>
-							<p className="text-white font-medium text-center md:text-left leading-relaxed tracking-wider font-regular">
+							<p className="text-white text-center md:text-left">
 								This is a big one and i consider it one of the most important things
 								for a designer to get right.
 							</p>
@@ -263,7 +259,9 @@ export default function Home() {
 									<>
 										<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
 											<div className="flex flex-row w-full justify-between items-center">
-												<span>What is your refund policy?</span>
+												<span className="text-sm md:text-base">
+													What is your refund policy?
+												</span>
 												<ChevronUpIcon
 													className={`${
 														open ? 'transform rotate-180' : ''
@@ -325,8 +323,8 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className="container-default relative mt-24" id="mission">
-				<h2 className="text-center mb-4 text-3xl sm:text-4xl">Our mission</h2>
+			<section className="container-default relative mt-16 md:mt-24" id="mission">
+				<h2 className="text-center mb-4">Our mission</h2>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 justify-center items-center my-16 lg:my-20">
 					<img
@@ -342,7 +340,7 @@ export default function Home() {
 						<h4 className="font-semibold text-4xl tracking-wider mb-6">
 							Milan Lengyeltoti
 						</h4>
-						<p className="font-regular text-left leading-relaxed tracking-wider ">
+						<p className="text-left">
 							Here goes the founder’s note about why this is the best thing since
 							sliced bread and why you’re passionate about this project. To learn more
 							about us, visit the About page.{' '}
@@ -359,12 +357,14 @@ export default function Home() {
 						<h4 className="text-white font-semibold text-4xl tracking-wider mb-6">
 							Want some updates?
 						</h4>
-						<p className="max-w-md font-regular text-white leading-relaxed tracking-wider mb-6">
+						<p className="max-w-md text-white mb-6">
 							CopDeck is not publicly available yet, but rest assured we’re hard at
 							work to change that. If you want to get exlusive updates about the
 							product join our mailing list{' '}
 						</p>
-						<EmailSignupForm></EmailSignupForm>
+						<div className="w-full sm:w-auto sm:mx-auto">
+							<EmailSignupForm></EmailSignupForm>
+						</div>
 					</div>
 				</div>
 			</section>

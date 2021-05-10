@@ -6,9 +6,9 @@ import Link from 'next/link'
 const Header = (props) => {
 	const navigation = [
 		{ name: 'Home', href: '/' },
-		{ name: 'Blog', href: '/blog' },
 		{ name: 'About', href: '/about' },
 		{ name: 'Contact', href: '/contact' },
+		{ name: 'Blog', href: '/blog' },
 	]
 
 	return (
@@ -32,7 +32,7 @@ const Header = (props) => {
 														src="/images/logo4.svg"
 														alt="Logo"
 													/>
-													<p className="ml-3 font-semibold text-lg">
+													<p className="ml-3 font-semibold text-lg text-gray-800">
 														CopDeck
 													</p>
 												</a>

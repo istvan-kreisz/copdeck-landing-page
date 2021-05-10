@@ -78,10 +78,8 @@ export default function Contact() {
 				id="q&a"
 			>
 				<div className="flex flex-col justify-center items-center md:items-start">
-					<h2 className="text-center md:text-left mb-4 text-3xl sm:text-4xl">
-						We’d love to hear from you
-					</h2>
-					<p className="font-medium text-center md:text-left leading-relaxed tracking-wider font-regular">
+					<h2 className="text-center md:text-left mb-6">We’d love to hear from you</h2>
+					<p className="text-center md:text-left">
 						This is a big one and i consider it one of the most important things for a
 						designer to get right.
 					</p>

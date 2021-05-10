@@ -12,7 +12,13 @@
 
 @layer base {
 	p {
-		@apply leading-relaxed text-gray-500;
+		@apply leading-relaxed text-gray-500 tracking-wider;
+	}
+
+	h1,
+	h2,
+	h3 {
+		@apply text-2xl sm:text-3xl md:text-4xl;
 	}
 
 	h1,
@@ -21,7 +27,7 @@
 	h4,
 	h5,
 	h6 {
-		@apply text-gray-800 sm:text-4xl text-3xl font-medium sm:leading-normal tracking-wide;
+		@apply text-gray-800 font-medium tracking-wide sm:leading-normal;
 	}
 
 	input,
@@ -32,10 +38,10 @@
 
 @layer components {
 	.container-default {
-		@apply container relative mx-auto max-w-7xl px-8 sm:px-14;
+		@apply container relative mx-auto max-w-7xl px-6 sm:px-14;
 	}
 
 	.button-default {
-		@apply flex cursor-pointer items-center justify-center px-8 py-3 border-transparent text-base font-medium rounded-2xl text-white bg-theme-orange hover:bg-theme-orange-dark md:py-4 md:text-lg outline-none ring-0 focus:outline-none;
+		@apply flex cursor-pointer items-center justify-center px-8 py-4 border-transparent text-base font-medium rounded-2xl text-white bg-theme-orange hover:bg-theme-orange-dark md:text-lg outline-none ring-0 focus:outline-none;
 	}
 }

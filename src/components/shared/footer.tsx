@@ -9,15 +9,17 @@ const Footer = (props) => {
 					<a aria-label="Home" className="flex items-center">
 						<span className="sr-only">Icon</span>
 						<img alt="Logo" className="sm:w-12 w-10" src="/images/logo4.svg" />
-						<p className="ml-3 font-semibold text-base sm:text-lg">CopDeck</p>
+						<p className="ml-3 hidden sm:block font-semibold text-base sm:text-lg text-gray-800">
+							CopDeck
+						</p>
 					</a>
 				</Link>
 				<SocialIcons></SocialIcons>
 			</div>
 
 			<hr className="container-default border-blue-300 border-t-3" />
-			<p className="text-gray-500 py-6 mx-auto text-sm text-center">
-				Copyright © 2021 CopDeck. All Rights Reserved
+			<p className="text-gray-500 py-6 mx-auto text-xs leading-4 sm:text-sm text-center">
+				Copyright © 2021 CopDeck.
 			</p>
 		</footer>
 	)
