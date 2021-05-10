@@ -5,6 +5,7 @@ import styles from './post.module.css'
 import Link from 'next/link'
 import { ArrowLeftIcon } from '@heroicons/react/outline'
 import EmailSignupForm from '../../components/shared/emailSignupForm'
+import Meta from '../../components/shared/meta'
 import { useRouter } from 'next/router'
 
 import { EmailShareButton, FacebookShareButton, TwitterShareButton } from 'react-share'
@@ -14,6 +15,8 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 
 	return (
 		<div>
+			{/* todo: what to use for title & description? */}
+			<Meta title="" description=""></Meta>
 			<header className="container-default">
 				<div className="group cursor-pointer my-12">
 					<Link href="/blog">

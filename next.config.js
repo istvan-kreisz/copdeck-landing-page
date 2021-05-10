@@ -1,5 +1,9 @@
 module.exports = {
+	// todo
 	env: {
+		title: 'page title',
+		description: 'page description',
+		twitterHandle: 'IKreisz',
 		twitter: 'https://www.twitter.com/IKreisz',
 		instagram: 'https://instagram.com/kreiszistvan',
 		facebook: 'https://www.facebook.com/kreisz.istvan',
@@ -9,6 +13,7 @@ module.exports = {
 		twitterML: 'https://www.twitter.com/LengyeltotiM',
 		instagramML: 'https://www.instagram.com/l.milan',
 		facebookML: 'https://www.facebook.com/leemilan2001',
+		baseURL: 'htttps://copdeck.com/',
 	},
 	future: {
 		webpack5: true,
