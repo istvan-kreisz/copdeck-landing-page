@@ -81,7 +81,7 @@ export default function Home() {
 			</section>
 			<section className="relative mt-10" id="features">
 				<img className="w-screen" src="/images/wave1_o.svg" alt="" />
-				<div className="w-screen -mt-1  bg-blue-600">
+				<div className="w-screen -mt-1  bg-theme-blue">
 					<h2 className="text-white text-center mb-16 text-3xl sm:text-4xl">
 						Check out these features
 					</h2>
@@ -108,7 +108,7 @@ export default function Home() {
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
 						<div className="flex flex-col justify-center items-center">
-							<div className="flex flex-col p-6 border-yellow-500 border-2 rounded-lg">
+							<div className="flex flex-col p-6 border-theme-orange border-2 rounded-lg">
 								<h4 className="text-white font-regular text-lg mb-3">Summary</h4>
 								<div className="flex flex-row justify-center items-center mb-3">
 									<CheckIcon className="text-white h-5 w-5"></CheckIcon>
@@ -163,7 +163,7 @@ export default function Home() {
 					<h2 className="text-center mb-8 mt-0 text-3xl sm:text-4xl">Testimonials</h2>
 					<p className="text-center max-w-sm mx-auto font-semibold text-base">
 						If you like us, send a tweet with our twitter handle{' '}
-						<span className=" text-blue-600">@CopDeck</span> and we may feature your
+						<span className="text-theme-blue">@CopDeck</span> and we may feature your
 						tweet here!
 					</p>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10">
@@ -245,7 +245,7 @@ export default function Home() {
 				</div>
 			</section>
 			<section className="relative mt-24" id="q&a">
-				<div className="w-screen  bg-blue-600">
+				<div className="w-screen  bg-theme-blue">
 					<div className="container-default grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 justify-center items-center py-16 md:py-24">
 						<div className="flex flex-col justify-center items-center md:items-start">
 							<h2 className="text-white text-center md:text-left mb-4 text-3xl sm:text-4xl">
@@ -267,7 +267,7 @@ export default function Home() {
 												<ChevronUpIcon
 													className={`${
 														open ? 'transform rotate-180' : ''
-													} w-8 h-8 text-blue-600`}
+													} w-8 h-8 text-theme-blue`}
 												/>
 											</div>
 											<Disclosure.Panel className="pt-4 pb-2 text-sm text-gray-500">
@@ -288,7 +288,7 @@ export default function Home() {
 												<ChevronUpIcon
 													className={`${
 														open ? 'transform rotate-180' : ''
-													} w-8 h-8 text-blue-600`}
+													} w-8 h-8 text-theme-blue`}
 												/>
 											</div>
 											<Disclosure.Panel className="pt-4 pb-2 text-sm text-gray-500">
@@ -309,7 +309,7 @@ export default function Home() {
 												<ChevronUpIcon
 													className={`${
 														open ? 'transform rotate-180' : ''
-													} w-8 h-8 text-blue-600`}
+													} w-8 h-8 text-theme-blue`}
 												/>
 											</div>
 											<Disclosure.Panel className="pt-4 pb-2 text-sm text-gray-500">
@@ -336,7 +336,7 @@ export default function Home() {
 					/>
 
 					<div className="flex flex-col items-center md:items-start">
-						<h3 className="text-base mb-6 font-semibold uppercase text-blue-500 tracking-widest">
+						<h3 className="text-base mb-6 font-semibold uppercase text-theme-blue tracking-widest">
 							Co-Founder & Marketing guru
 						</h3>
 						<h4 className="font-semibold text-4xl tracking-wider mb-6">
@@ -351,9 +351,9 @@ export default function Home() {
 				</div>
 			</section>
 			<section className="relative mt-24" id="mailing-list">
-				<div className="w-screen  bg-blue-600">
+				<div className="w-screen  bg-theme-blue">
 					<div className="container-default flex flex-col text-center justify-center items-center py-16 md:py-24">
-						<h3 className="text-base mb-6 font-semibold uppercase text-yellow-500 tracking-widest">
+						<h3 className="text-base mb-6 font-semibold uppercase text-theme-orange tracking-widest">
 							Follow our journey
 						</h3>
 						<h4 className="text-white font-semibold text-4xl tracking-wider mb-6">

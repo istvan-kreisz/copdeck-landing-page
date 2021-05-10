@@ -26,7 +26,7 @@ export default function About() {
 					<h3 className="font-semibold text-2xl tracking-wider mb-5 mt-6">
 						Milan Lengyeltoti
 					</h3>
-					<h4 className="text-base mb-5 font-semibold uppercase text-blue-500 tracking-widest">
+					<h4 className="text-base mb-5 font-semibold uppercase text-theme-blue tracking-widest">
 						Co-Founder & Marketing guru
 					</h4>
 					<p className="font-regular mb-8 text-left leading-relaxed tracking-wider w-4/5 lg:w-2/3">
@@ -50,7 +50,7 @@ export default function About() {
 					<h3 className="font-semibold text-2xl tracking-wider mb-5 mt-6">
 						Milan Lengyeltoti
 					</h3>
-					<h4 className="text-base mb-5 font-semibold uppercase text-blue-500 tracking-widest">
+					<h4 className="text-base mb-5 font-semibold uppercase text-theme-blue tracking-widest">
 						Co-Founder & Marketing guru
 					</h4>
 					<p className="font-regular mb-8 text-left leading-relaxed tracking-wider w-4/5 lg:w-2/3">

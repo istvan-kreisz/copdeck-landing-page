@@ -21,7 +21,7 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 				<div className="group cursor-pointer my-12">
 					<Link href="/blog">
 						<div className="flex items-center space-x-4">
-							<div className="bg-yellow-500 group-hover:bg-yellow-600 h-12 w-12 rounded-xl flex items-center">
+							<div className="bg-theme-orange group-hover:bg-theme-orange h-12 w-12 rounded-xl flex items-center">
 								<ArrowLeftIcon
 									className="mx-auto text-center h-6 w-6 text-white"
 									aria-hidden="true"
@@ -86,7 +86,7 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 
 					<div className="bg-gray-400 border-gray-400 border-t-2 flex-1"></div>
 				</div>
-				<div className="bg-blue-600 mb-20 rounded-3xl mx-auto flex flex-col space-y-8 items-center px-8 py-8 max-w-2xl">
+				<div className="bg-theme-blue mb-20 rounded-3xl mx-auto flex flex-col space-y-8 items-center px-8 py-8 max-w-2xl">
 					<h4 className="text-white font-semibold text-4xl tracking-wider">Want more?</h4>
 					<p className="max-w-md font-regular text-white leading-relaxed tracking-wider mt-0 mb-6">
 						Sign up to the newsletter for more sneaker reselling tips & tricks and

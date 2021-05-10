@@ -16,7 +16,7 @@ const ArticleCard = (props) => {
 							alt="Post Preview"
 							// src={'images/posts/' + props.slug + '/' + props.slug + '-thumbnail.jpg'} // todo: delete
 						/>
-						<div className="bg-yellow-500 group-hover:bg-yellow-600 h-12 w-12 rounded-xl flex items-center absolute bottom-5 right-5">
+						<div className="bg-theme-orange group-hover:bg-theme-orange-dark h-12 w-12 rounded-xl flex items-center absolute bottom-5 right-5">
 							<ArrowRightIcon
 								className="mx-auto text-center h-6 w-6 text-white"
 								aria-hidden="true"
