@@ -1,6 +1,7 @@
 module.exports = {
 	// todo
 	env: {
+		siteName: 'CopDeck',
 		title: 'page title',
 		description: 'page description',
 		twitterHandle: 'IKreisz',

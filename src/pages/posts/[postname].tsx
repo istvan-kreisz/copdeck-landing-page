@@ -36,7 +36,7 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 					<img
 						className="object-fill w-full h-full rounded-3xl"
 						src={`/images/posts/${postname}/${postname}-large.jpg`}
-						alt=""
+						alt="Article Photo"
 					/>
 					<div
 						style={{
@@ -69,7 +69,7 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 							resetButtonStyle={false}
 							className="focus:outline-none"
 						>
-							<img className="h-6" src="/images/twitter.svg" alt="" />
+							<img alt="Twitter Link" className="h-6" src="/images/twitter.svg" />
 						</TwitterShareButton>
 					) : null}
 					{typeof window !== 'undefined' ? (
@@ -80,7 +80,7 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 							resetButtonStyle={false}
 							className="focus:outline-none"
 						>
-							<img className="h-6" src="/images/facebook.svg" alt="" />
+							<img alt="Facebook Link" className="h-6" src="/images/facebook.svg" />
 						</FacebookShareButton>
 					) : null}
 

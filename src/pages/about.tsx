@@ -19,7 +19,7 @@ export default function About() {
 				<div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
 					<img
 						className="object-cover  object-center rounded justify-self-center"
-						alt="hero"
+						alt="Founder Photo"
 						src="https://dummyimage.com/378x453"
 					/>
 
@@ -43,7 +43,7 @@ export default function About() {
 				<div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
 					<img
 						className="object-cover  object-center rounded justify-self-center"
-						alt="hero"
+						alt="Founder Photo"
 						src="https://dummyimage.com/378x453"
 					/>
 

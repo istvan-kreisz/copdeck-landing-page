@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 const meta = ({
 	canonicalURL = null,
@@ -12,7 +12,6 @@ const meta = ({
 
 	return (
 		<Head>
-			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<title>{title}</title>
 			<meta name="description" content={description} />
 			<link rel="canonical" href={canonical} />
@@ -20,7 +19,7 @@ const meta = ({
 			<meta property="og:type" content="website" />
 			<meta property="og:title" content={title} />
 			<meta property="og:description" content={description} />
-			<meta property="og:site_name" content="Istvan Kreisz" />
+			<meta property="og:site_name" content={process.env.siteName} />
 			<meta
 				property="og:image"
 				content={`${
@@ -30,6 +29,8 @@ const meta = ({
 			<meta property="og:url" content={`${canonical}`} />
 			<meta property="og:image:width" content="1200" />
 			<meta property="og:image:height" content="627" />
+			<link rel="shortcut icon" href="/images/favicons/favicon.ico" />
+			<meta property="fb:app_id" content={process.env.NEXT_PUBLIC_FACEBOOK_APP_ID} />
 			{/* twitter */}
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:title" content={title} />

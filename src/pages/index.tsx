@@ -3,24 +3,49 @@ import LinkButton from '../components/shared/linkButton'
 import EmailSignupForm from '../components/shared/emailSignupForm'
 import FeatureBox from '../components/home/featureBox'
 import Layout from '../components/shared/defaultLayout'
+import { useLayoutEffect } from 'react'
 
 import { ArrowCircleRightIcon, SearchIcon, CheckIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 
 export default function Home() {
+	useLayoutEffect(() => {
+		const tawkSource = 'https://embed.tawk.to/60992321b1d5182476b7784f/1f5b32ffa'
+		const scripts = Array.from(window.document.body.querySelectorAll('script'))
+		const hasScript =
+			scripts.find((script) => {
+				script.src === tawkSource
+			}) !== undefined
+		if (hasScript) return
+
+		window['Tawk_API'] = window['Tawk_API'] || {}
+		window['Tawk_LoadStart'] = new Date()
+
+		var script = document.createElement('script')
+		const firstScript = document.getElementsByTagName('script')[0]
+		script.async = true
+		script.src = tawkSource
+		script.setAttribute('crossorigin', '*')
+		firstScript.parentNode.insertBefore(script, firstScript)
+
+		return () => {
+			script?.parentNode?.removeChild(script)
+		}
+	}, [])
+
 	return (
 		<Layout>
 			<section className="container-default mt-2 lg:mt-4 text-gray-600">
 				<div className="relative  w-full flex  md:flex-row flex-col items-center justify-around">
 					<div className="flex flex-col items-center lg:pr-48 justify-center order-2 md:order-first lg:flex-grow w-full">
 						<img
-							className="object-cover  object-center rounded"
-							alt="hero"
-							src="https://dummyimage.com/250x500"
+							className="object-cover w-64  object-center rounded"
+							alt="App Preview"
+							src="/images/hero_edited.jpg"
 						/>
 						{/* <Link href="/demo">
-							<a className="mt-12">
+							<a aria-label="Demo" className="mt-12">
 								<div className="group flex flex-row content-center items-center mb-3">
 									<div className="flex flex-col content-center items-center">
 										<p className="group-hover:text-gray-900 text-base font-bold mb-2">
@@ -64,18 +89,21 @@ export default function Home() {
 						<FeatureBox
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
+							imagename="hero"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
 						<FeatureBox
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
+							imagename="pricealert_edited"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
 						<FeatureBox
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
+							imagename="pricealert_edited"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -115,12 +143,14 @@ export default function Home() {
 						<FeatureBox
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
+							imagename="pricealert_edited"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
 						<FeatureBox
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
+							imagename="pricealert_edited"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -301,7 +331,7 @@ export default function Home() {
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 justify-center items-center my-16 lg:my-24">
 					<img
 						className="object-cover  object-center rounded justify-self-center"
-						alt="hero"
+						alt="Founder Photo"
 						src="https://dummyimage.com/355x520"
 					/>
 

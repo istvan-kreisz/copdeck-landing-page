@@ -25,11 +25,12 @@ const Header = (props) => {
 									<div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
 										<div className="flex items-center justify-between w-full md:w-auto">
 											<Link href="/">
-												<a className="flex items-center">
+												<a aria-label="Home" className="flex items-center">
 													<span className="sr-only">Icon</span>
 													<img
 														className="h-14 sm:h-16 w-auto "
 														src="/images/sneaker.png"
+														alt="Logo"
 													/>
 													<p className="ml-3 font-semibold text-lg">
 														CopDeck
@@ -80,7 +81,7 @@ const Header = (props) => {
 												<img
 													className="h-14 w-auto"
 													src="/images/sneaker.png"
-													alt=""
+													alt="Logo"
 												/>
 											</div>
 											<div className="-mr-2">
