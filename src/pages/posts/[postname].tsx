@@ -3,11 +3,15 @@ import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import styles from './post.module.css'
 import Link from 'next/link'
-import Footer from '../../components/shared/footer'
 import { ArrowLeftIcon } from '@heroicons/react/outline'
 import EmailSignupForm from '../../components/shared/emailSignupForm'
+import { useRouter } from 'next/router'
+
+import { EmailShareButton, FacebookShareButton, TwitterShareButton } from 'react-share'
 
 export default function BlogPost({ frontmatter, markdownBody, postname }) {
+	const router = useRouter()
+
 	return (
 		<div>
 			<header className="container-default">
@@ -48,13 +52,43 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 				<ReactMarkdown className={styles.article} remarkPlugins={[gfm]}>
 					{markdownBody}
 				</ReactMarkdown>
-				<div className="bg-blue-600 my-20 rounded-3xl mx-auto flex flex-col space-y-8 items-center px-8 py-8 max-w-2xl">
-					<h3 className="text-white w-3/4 font-semibold text-xl m-0 text-center md:text-2xl leading-6">
-						Sign up to the newsletter for more sneaker reselling tips & tricks!
-					</h3>
+			</main>
+			<footer className="container-default">
+				<div className="my-20 space-x-8 mx-auto flex flex-row justify-center items-center">
+					<div className="bg-gray-400 border-gray-400 border-t-2 flex-1"></div>
+					<p className="font-medium hidden sm:block">Click to share:</p>
+					<TwitterShareButton
+						title={frontmatter?.title}
+						via={'CopDeck'}
+						url={window.location.href}
+						// hashtags={['sneakers']}
+						resetButtonStyle={false}
+						className="focus:outline-none"
+					>
+						<img className="h-6" src="/images/twitter.svg" alt="" />
+					</TwitterShareButton>
+					<FacebookShareButton
+						quote={frontmatter?.title}
+						url={window.location.href}
+						hashtag="#copdeck"
+						resetButtonStyle={false}
+						className="focus:outline-none"
+					>
+						<img className="h-6" src="/images/facebook.svg" alt="" />
+					</FacebookShareButton>
+
+					<div className="bg-gray-400 border-gray-400 border-t-2 flex-1"></div>
+				</div>
+				<div className="bg-blue-600 mb-20 rounded-3xl mx-auto flex flex-col space-y-8 items-center px-8 py-8 max-w-2xl">
+					<h4 className="text-white font-semibold text-4xl tracking-wider">Want more?</h4>
+					<p className="max-w-md font-regular text-white leading-relaxed tracking-wider mt-0 mb-6">
+						Sign up to the newsletter for more sneaker reselling tips & tricks and
+						CopDeck product announcements!
+					</p>
+
 					<EmailSignupForm></EmailSignupForm>
 				</div>
-			</main>
+			</footer>
 		</div>
 	)
 }
