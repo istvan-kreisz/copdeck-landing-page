@@ -42,7 +42,7 @@ export default function Home() {
 						<img
 							className="object-cover w-64  object-center rounded"
 							alt="App Preview"
-							src="/images/hero_edited.jpg"
+							src="/images/hero_edited.png"
 						/>
 						{/* <Link href="/demo">
 							<a aria-label="Demo" className="mt-12">
@@ -89,7 +89,7 @@ export default function Home() {
 						<FeatureBox
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
-							imagename="hero"
+							imagename="hero_edited"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -103,7 +103,7 @@ export default function Home() {
 						<FeatureBox
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
-							imagename="pricealert_edited"
+							imagename="inventory_edited"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -143,14 +143,14 @@ export default function Home() {
 						<FeatureBox
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
-							imagename="pricealert_edited"
+							imagename="feed_edited"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
 						<FeatureBox
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
-							imagename="pricealert_edited"
+							imagename="stats_edited"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
