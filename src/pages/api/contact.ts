@@ -18,7 +18,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 			// cors(req, res, () => {
 			const mailOptions = {
 				from: process.env.CONTACT_EMAIL,
-				to: `${process.env.CONTACT_EMAIL}, ${process.env.CONTACT_EMAIL_2}`,
+				to: `${process.env.CONTACT_EMAIL}, ${''}`,
 				subject: `CopDeck Message`,
 				html: `<p style="font-size: 16px;">${req.body.message}</p>
                 <br />

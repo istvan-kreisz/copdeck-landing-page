@@ -34,7 +34,11 @@ export default function About() {
 						bread and why you’re passionate about this project. To learn more about us,
 						visit the About page.{' '}
 					</p>
-					<SocialIcons></SocialIcons>
+					<SocialIcons
+						twitter={process.env.twitterML}
+						instagram={process.env.instagramML}
+						facebook={process.env.facebookML}
+					></SocialIcons>
 				</div>
 				<div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
 					<img
@@ -54,7 +58,11 @@ export default function About() {
 						bread and why you’re passionate about this project. To learn more about us,
 						visit the About page.{' '}
 					</p>
-					<SocialIcons></SocialIcons>
+					<SocialIcons
+						twitter={process.env.twitterIK}
+						instagram={process.env.instagramIK}
+						facebook={process.env.facebookIK}
+					></SocialIcons>
 				</div>
 			</section>
 		</Layout>
