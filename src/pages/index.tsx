@@ -80,12 +80,15 @@ export default function Home() {
 			<section className="relative mt-10" id="features">
 				<img className="w-screen" src="/images/wave1_o.png" alt="" />
 				<div className="w-screen -mt-1 lg:-mt-10 py-10 sm:pt-0 bg-theme-blue">
-					<h2 className="text-white text-center mb-16">Check out these features</h2>
+					<h2 className="text-white text-center mb-16 lg:mb-6">
+						Check out these features
+					</h2>
 					<div className="container-default grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-12 sm:gap-y-10 place-items-center">
 						<FeatureBox
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
 							imagename="hero_edited"
+							className="order-1"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -93,6 +96,7 @@ export default function Home() {
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
 							imagename="pricealert_edited"
+							className="lg:mt-12 order-2"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -100,10 +104,11 @@ export default function Home() {
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
 							imagename="inventory_edited"
+							className="lg:mt-44 order-3"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
-						<div className="flex flex-col justify-center items-center">
+						<div className="flex flex-col justify-center items-center lg:mb-16 order-6 lg:order-4">
 							<div className="flex flex-col p-6 border-theme-orange border-2 rounded-lg">
 								<h4 className="text-white font-regular text-lg mb-3">Summary</h4>
 								<div className="flex flex-row justify-center items-center mb-3">
@@ -140,6 +145,7 @@ export default function Home() {
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
 							imagename="feed_edited"
+							className="order-4 lg:order-5"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -147,6 +153,7 @@ export default function Home() {
 							title="Search sneakers"
 							description="Better a diamond with a flaw than a pebble without one."
 							imagename="stats_edited"
+							className="lg:mt-8 order-5 lg:order-6"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>

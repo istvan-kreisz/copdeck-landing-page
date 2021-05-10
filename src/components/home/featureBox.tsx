@@ -1,6 +1,6 @@
-const FeatureBox = ({ title, description, imagename, children }) => {
+const FeatureBox = ({ title, description, imagename, children, className = '' }) => {
 	return (
-		<div className="flex flex-col max-w-xs items-center">
+		<div className={`flex flex-col max-w-xs items-center ${className}`}>
 			<img
 				className="object-cover w-56 object-center rounded"
 				src={`/images/${imagename}.png`}
