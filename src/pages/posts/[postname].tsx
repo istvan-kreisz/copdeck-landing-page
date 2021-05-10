@@ -27,7 +27,7 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 									aria-hidden="true"
 								></ArrowLeftIcon>
 							</div>
-							<a className="text-gray-800 font-bold text-xl">Back to all articles</a>
+							<a className="font-bold text-xl">Back to all articles</a>
 						</div>
 					</Link>
 				</div>

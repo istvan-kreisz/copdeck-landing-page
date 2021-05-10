@@ -98,7 +98,7 @@ export default function Contact() {
 						type="email"
 						id="email"
 						name="email"
-						className="w-full h-12 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+						className="w-full h-12 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 						required
 					/>
 					<textarea
@@ -108,7 +108,7 @@ export default function Contact() {
 						placeholder="Your message"
 						name="message"
 						rows={5}
-						className="w-full h-32 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+						className="w-full h-32 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 						required
 					></textarea>
 					<InputButton name="Send message"></InputButton>

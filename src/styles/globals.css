@@ -11,6 +11,23 @@
 }
 
 @layer base {
+	p {
+		@apply leading-relaxed text-gray-500;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-gray-800 sm:text-4xl text-3xl font-medium sm:leading-normal tracking-wide;
+	}
+
+	input,
+	textarea {
+		@apply text-gray-700;
+	}
 }
 
 @layer components {

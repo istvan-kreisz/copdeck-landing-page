@@ -36,7 +36,7 @@ export default function Home() {
 
 	return (
 		<Layout>
-			<section className="container-default mt-2 lg:mt-4 text-gray-600">
+			<section className="container-default mt-2 lg:mt-4">
 				<div className="relative  w-full flex  md:flex-row flex-col items-center justify-around">
 					<div className="flex flex-col items-center lg:pr-48 justify-center order-2 md:order-first lg:flex-grow w-full">
 						<img
@@ -64,10 +64,10 @@ export default function Home() {
 						</Link> */}
 					</div>
 					<div className="ml-4 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-						<h1 className="sm:text-4xl text-3xl mb-4 font-medium sm:leading-normal tracking-wide text-gray-900">
+						<h1 className="sm:text-4xl text-3xl mb-4 font-medium sm:leading-normal tracking-wide">
 							Sneaker reselling made easy.
 						</h1>
-						<p className="mb-8 leading-relaxed font-regular sm:mb-20">
+						<p className="mb-8 font-regular sm:mb-20">
 							Ditch the spreadsheet. Price comparison, inventory management, price
 							alerts and a built in buy & sell feed.
 						</p>
@@ -261,7 +261,7 @@ export default function Home() {
 							<Disclosure>
 								{({ open }) => (
 									<>
-										<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left text-gray-600 bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
+										<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
 											<div className="flex flex-row w-full justify-between items-center">
 												<span>What is your refund policy?</span>
 												<ChevronUpIcon
@@ -270,7 +270,7 @@ export default function Home() {
 													} w-8 h-8 text-theme-blue`}
 												/>
 											</div>
-											<Disclosure.Panel className="pt-4 pb-2 text-sm text-gray-500">
+											<Disclosure.Panel className="pt-4 pb-2 text-sm">
 												If you're unhappy with your purchase for any reason,
 												email us within 90 days and we'll refund you in
 												full, no questions asked.
@@ -282,7 +282,7 @@ export default function Home() {
 							<Disclosure>
 								{({ open }) => (
 									<>
-										<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left text-gray-600 bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
+										<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
 											<div className="flex flex-row w-full justify-between items-center">
 												<span>What is your refund policy?</span>
 												<ChevronUpIcon
@@ -291,7 +291,7 @@ export default function Home() {
 													} w-8 h-8 text-theme-blue`}
 												/>
 											</div>
-											<Disclosure.Panel className="pt-4 pb-2 text-sm text-gray-500">
+											<Disclosure.Panel className="pt-4 pb-2 text-sm">
 												If you're unhappy with your purchase for any reason,
 												email us within 90 days and we'll refund you in
 												full, no questions asked.
@@ -303,7 +303,7 @@ export default function Home() {
 							<Disclosure>
 								{({ open }) => (
 									<>
-										<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left text-gray-600 bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
+										<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
 											<div className="flex flex-row w-full justify-between items-center">
 												<span>What is your refund policy?</span>
 												<ChevronUpIcon
@@ -312,7 +312,7 @@ export default function Home() {
 													} w-8 h-8 text-theme-blue`}
 												/>
 											</div>
-											<Disclosure.Panel className="pt-4 pb-2 text-sm text-gray-500">
+											<Disclosure.Panel className="pt-4 pb-2 text-sm">
 												If you're unhappy with your purchase for any reason,
 												email us within 90 days and we'll refund you in
 												full, no questions asked.
@@ -325,10 +325,10 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className="container-default relative mt-16" id="mission">
+			<section className="container-default relative mt-24" id="mission">
 				<h2 className="text-center mb-4 text-3xl sm:text-4xl">Our mission</h2>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 justify-center items-center my-16 lg:my-24">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 justify-center items-center my-16 lg:my-20">
 					<img
 						className="object-cover  object-center rounded justify-self-center"
 						alt="Founder Photo"

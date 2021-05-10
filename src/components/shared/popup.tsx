@@ -47,14 +47,11 @@ export default function Popup({ title, message, style, open, close }) {
 					>
 						<div className="inline-block w-80 max-w-md p-6 my-8 overflow-hidden text-center align-middle transition-all transform bg-white shadow-xl rounded-2xl">
 							<div className="flex flex-col justify-center items-center space-y-8">
-								<Dialog.Title
-									as="h3"
-									className="text-2xl font-medium leading-6 text-gray-900"
-								>
+								<Dialog.Title as="h3" className="text-2xl font-medium leading-6">
 									{title}
 								</Dialog.Title>
 								<div className="mt-2">
-									<p className="text-md text-gray-500">{message}</p>
+									<p className="text-md">{message}</p>
 								</div>
 
 								<div className="mt-12">

@@ -44,8 +44,8 @@ const Blog = ({ articles }) => {
 
 	return (
 		<Layout>
-			<section className="container-default mt-2 lg:mt-4 text-gray-600">
-				<h1 className="sm:text-4xl text-3xl mb-8 text-center font-medium sm:leading-normal tracking-wide text-gray-900">
+			<section className="container-default mt-2 lg:mt-4">
+				<h1 className="sm:text-4xl text-3xl mb-8 text-center font-medium sm:leading-normal tracking-wide">
 					CopDeck Blog
 				</h1>
 				<p className="max-w-md mx-auto mb-16 sm:mb-32 leading-relaxed font-regular text-center">
