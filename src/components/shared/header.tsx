@@ -28,8 +28,8 @@ const Header = (props) => {
 												<a aria-label="Home" className="flex items-center">
 													<span className="sr-only">Icon</span>
 													<img
-														className="h-14 sm:h-16 w-auto "
-														src="/images/sneaker.png"
+														className="sm:w-12 w-10"
+														src="/images/logo4.svg"
 														alt="Logo"
 													/>
 													<p className="ml-3 font-semibold text-lg">
@@ -73,14 +73,14 @@ const Header = (props) => {
 								<Popover.Panel
 									focus
 									static
-									className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+									className="absolute top-0 inset-x-0 py-6 transition transform origin-top-right md:hidden"
 								>
 									<div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
 										<div className="px-5 pt-4 flex items-center justify-between">
 											<div>
 												<img
-													className="h-14 w-auto"
-													src="/images/sneaker.png"
+													className="w-10"
+													src="/images/logo4.svg"
 													alt="Logo"
 												/>
 											</div>
