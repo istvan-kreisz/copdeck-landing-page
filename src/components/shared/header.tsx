@@ -29,7 +29,7 @@ const Header = (props) => {
 													<span className="sr-only">Icon</span>
 													<img
 														className="sm:w-12 w-10"
-														src="/images/logo4.svg"
+														src="/images/logo5.svg"
 														alt="Logo"
 													/>
 													<p className="ml-3 font-semibold text-lg text-gray-800">
@@ -80,7 +80,7 @@ const Header = (props) => {
 											<div>
 												<img
 													className="w-10"
-													src="/images/logo4.svg"
+													src="/images/logo5.svg"
 													alt="Logo"
 												/>
 											</div>
