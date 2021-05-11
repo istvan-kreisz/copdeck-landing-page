@@ -53,8 +53,7 @@ const Blog = ({ articles }) => {
 			<section className="container-default mt-2 lg:mt-4">
 				<h1 className="mb-6 text-center">CopDeck Blog</h1>
 				<p className="max-w-md mx-auto mb-16 sm:mb-24 text-center">
-					Mission statement goes here Mission statement goes here Mission statement goes
-					here Mission statement goes here Mission statement goes here
+					Sneaker news & reselling tips
 				</p>
 			</section>
 			<section className="container-default">

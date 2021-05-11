@@ -12,15 +12,13 @@ export default function About() {
 	return (
 		<Layout>
 			<section className="container-default mt-2 lg:mt-4">
-				<h1 className="mb-6 text-center md:text-left">Meet the team</h1>
-				<p className="mb-8 sm:mb-20 text-center md:text-left">
-					Mission statement goes here Mission statement goes here Mission statement goes
-					here Mission statement goes here Mission statement goes here Mission statement
-					goes here Mission statement goes here Mission statement goes here Mission
-					statement goes here Mission statement goes here
+				<h1 className="mb-6 text-center md:text-left">The team</h1>
+				<p className="mb-8 sm:mb-10 text-center md:text-left">
+					Just two dudes looking to disrupt the sneaker game by making reselling easy and
+					fun as it should be.
 				</p>
 			</section>
-			<section className="container-default grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 justify-center items-center my-20 lg:my-24">
+			<section className="container-default grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 justify-center items-start my-14 lg:my-20">
 				<div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
 					<a href={process.env.twitterML} className="relative">
 						<img
@@ -43,9 +41,9 @@ export default function About() {
 						Co-Founder & Marketing guru
 					</h4>
 					<p className="mb-8 text-left w-full lg:w-2/3">
-						Here goes the founder’s note about why this is the best thing since sliced
-						bread and why you’re passionate about this project. To learn more about us,
-						visit the About page.{' '}
+						Sneakerhead. Marketer. Entrepreneur. First sneaker? Adidas NMD Tricolor.
+						Grail? Air Jordan 1 Reverse SBB. My passion for sneaks eventually became a
+						gig, but I'm still not the Don.
 					</p>
 				</div>
 				<div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
@@ -66,13 +64,15 @@ export default function About() {
 					<h3 className="font-semibold text-2xl tracking-wider mb-5 mt-6">
 						Istvan Kreisz
 					</h3>
-					<h4 className="text-base mb-5 font-semibold uppercase text-theme-blue tracking-widest">
-						Co-Founder & Marketing guru
+					<h4 className="text-base mb-5 font-semibold uppercase text-theme-orange tracking-widest">
+						Co-Founder & Coding ninja
 					</h4>
 					<p className="mb-8 text-left w-full lg:w-2/3">
-						Here goes the founder’s note about why this is the best thing since sliced
-						bread and why you’re passionate about this project. To learn more about us,
-						visit the About page.{' '}
+						I first heard about sneakers being a thing when my little brother bought a
+						pair of Yeezys for aroung $500 and I thought he was out of his mind. Fast
+						forward a few years and here I am spending way more than I should on
+						sneakers and building a product for sneakerheads. Funny how things work
+						out...
 					</p>
 				</div>
 			</section>

@@ -83,7 +83,7 @@ export default function Home() {
 						<h1 className="mb-4">{remoteConfig?.title}</h1>
 						<p className="mb-12 sm:mb-20">{remoteConfig?.subtitle}</p>
 						<p className="text-xs font-medium text-gray-900 mb-3">
-							To get exclusive updates about updates:
+							Sign up to get exclusive updates about the beta
 						</p>
 
 						<div className="w-full sm:w-auto">

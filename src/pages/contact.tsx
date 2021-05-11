@@ -84,10 +84,10 @@ export default function Contact() {
 				id="q&a"
 			>
 				<div className="flex flex-col justify-center items-center md:items-start">
-					<h2 className="text-center md:text-left mb-6">We’d love to hear from you</h2>
+					<h2 className="text-center md:text-left mb-6">Drop us a line</h2>
 					<p className="text-center md:text-left">
-						This is a big one and i consider it one of the most important things for a
-						designer to get right.
+						We'd love to hear from you. Ask us about anything, like Kanye's infamous
+						too-small pool slides.
 					</p>
 				</div>
 
@@ -98,7 +98,7 @@ export default function Contact() {
 				>
 					<input
 						ref={emailField}
-						placeholder="Your email"
+						placeholder="Type your email addess here"
 						type="email"
 						id="email"
 						name="email"
@@ -109,7 +109,7 @@ export default function Contact() {
 						ref={messageField}
 						style={{ resize: 'none' }}
 						id="message"
-						placeholder="Your message"
+						placeholder="Type your message here"
 						name="message"
 						rows={5}
 						className="w-full h-32 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
