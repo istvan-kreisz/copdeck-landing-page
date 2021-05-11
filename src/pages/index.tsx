@@ -4,6 +4,7 @@ import FeatureBox from '../components/home/featureBox'
 import Layout from '../components/shared/defaultLayout'
 import { useLayoutEffect, useState, useEffect, useContext } from 'react'
 import FirebaseContext from '../context/firebaseContext'
+import ConfigContext from '../context/configContext'
 
 import { SearchIcon, CheckIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'
@@ -12,6 +13,7 @@ import { ChevronUpIcon } from '@heroicons/react/solid'
 export default function Home() {
 	const [arrows, setArrows] = useState<any>()
 	const firebase = useContext(FirebaseContext)
+	const remoteConfig = useContext(ConfigContext)
 
 	useEffect(() => {
 		firebase?.analytics().logEvent('visited_home')
@@ -45,9 +47,7 @@ export default function Home() {
 		}
 	}, [])
 
-	// if (typeof window === 'undefined') {
-	// 	global.window = {}
-	// }
+	console.log(remoteConfig)
 
 	return (
 		<Layout>
@@ -79,11 +79,8 @@ export default function Home() {
 						</Link> */}
 					</div>
 					<div className="flex-shrink ml-4 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-						<h1 className="mb-4">Sneaker reselling made easy.</h1>
-						<p className="mb-12 sm:mb-20">
-							Ditch the spreadsheet. Price comparison, inventory management, price
-							alerts and a built in buy & sell feed.
-						</p>
+						<h1 className="mb-4">{remoteConfig?.hero_title?.asString()}</h1>
+						<p className="mb-12 sm:mb-20">{remoteConfig?.hero_subtitle?.asString()}</p>
 						<p className="text-xs font-medium text-gray-900 mb-3">
 							To get exclusive updates about updates:
 						</p>

@@ -3,7 +3,9 @@ import { AppProps } from 'next/app'
 import { useEffect, useState } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/analytics'
+import 'firebase/remote-config'
 import FirebaseContext from '../context/firebaseContext'
+import ConfigContext from '../context/configContext'
 
 const firebaseConfig = {
 	apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -18,19 +20,52 @@ const firebaseConfig = {
 
 function App({ Component, pageProps }: AppProps) {
 	const [firebaseApp, setFirebaseApp] = useState(null)
+	const [config, setRemoteConfig] = useState(null)
 
 	useEffect(() => {
 		if (!firebase.apps.length) {
 			firebase.initializeApp(firebaseConfig)
 		}
-		firebase.analytics()
+		const remoteConfig = firebase.remoteConfig()
 
+		remoteConfig.settings = {
+			fetchTimeoutMillis: 60000,
+			minimumFetchIntervalMillis: process.env.NODE_ENV === 'development' ? 1 : 3600000,
+		}
+
+		remoteConfig.defaultConfig = {
+			hero_title: 'Welcome',
+			hero_subtitle: 'this is some text',
+		}
+		remoteConfig
+			.fetchAndActivate()
+			.then((activated) => {
+				if (process.env.NODE_ENV === 'development') {
+					console.log('fetched config')
+				}
+				if (!activated) console.log('not activated')
+				return remoteConfig.getAll()
+			})
+			.then((remoteFlags) => {
+				setRemoteConfig(remoteFlags)
+			})
+			.catch((err) => {
+				if (process.env.NODE_ENV === 'development') {
+					console.log('fetching config failed')
+					console.log(err)
+				}
+				setRemoteConfig(remoteConfig.defaultConfig)
+			})
+
+		firebase.analytics()
 		setFirebaseApp(firebase)
 	}, [])
 	return (
-		<FirebaseContext.Provider value={firebaseApp}>
-			<Component {...pageProps} />
-		</FirebaseContext.Provider>
+		<ConfigContext.Provider value={config}>
+			<FirebaseContext.Provider value={firebaseApp}>
+				<Component {...pageProps} />
+			</FirebaseContext.Provider>
+		</ConfigContext.Provider>
 	)
 }
 
