@@ -34,8 +34,8 @@ function App({ Component, pageProps }: AppProps) {
 		}
 
 		remoteConfig.defaultConfig = {
-			hero_title: 'Welcome',
-			hero_subtitle: 'this is some text',
+			title: 'Welcome',
+			subtitle: 'this is some text',
 		}
 		remoteConfig
 			.fetchAndActivate()
@@ -46,8 +46,17 @@ function App({ Component, pageProps }: AppProps) {
 				if (!activated) console.log('not activated')
 				return remoteConfig.getAll()
 			})
-			.then((remoteFlags) => {
-				setRemoteConfig(remoteFlags)
+			.then((config) => {
+				const configJSON = config?.hero?.asString()
+				if (configJSON) {
+					const config = JSON.parse(configJSON)
+					setRemoteConfig({
+						title: config.title ?? remoteConfig.defaultConfig.title,
+						subtitle: config.subtitle ?? remoteConfig.defaultConfig.subtitle,
+					})
+				} else {
+					setRemoteConfig(remoteConfig.defaultConfig)
+				}
 			})
 			.catch((err) => {
 				if (process.env.NODE_ENV === 'development') {

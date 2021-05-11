@@ -79,8 +79,8 @@ export default function Home() {
 						</Link> */}
 					</div>
 					<div className="flex-shrink ml-4 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-						<h1 className="mb-4">{remoteConfig?.hero_title?.asString()}</h1>
-						<p className="mb-12 sm:mb-20">{remoteConfig?.hero_subtitle?.asString()}</p>
+						<h1 className="mb-4">{remoteConfig?.title}</h1>
+						<p className="mb-12 sm:mb-20">{remoteConfig?.subtitle}</p>
 						<p className="text-xs font-medium text-gray-900 mb-3">
 							To get exclusive updates about updates:
 						</p>
