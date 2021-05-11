@@ -36,6 +36,7 @@ function App({ Component, pageProps }: AppProps) {
 		remoteConfig.defaultConfig = {
 			title: 'Welcome',
 			subtitle: 'this is some text',
+			id: 'default',
 		}
 		remoteConfig
 			.fetchAndActivate()
@@ -47,12 +48,14 @@ function App({ Component, pageProps }: AppProps) {
 				return remoteConfig.getAll()
 			})
 			.then((config) => {
+				console.log(config)
 				const configJSON = config?.hero?.asString()
 				if (configJSON) {
 					const config = JSON.parse(configJSON)
 					setRemoteConfig({
 						title: config.title ?? remoteConfig.defaultConfig.title,
 						subtitle: config.subtitle ?? remoteConfig.defaultConfig.subtitle,
+						id: config.id ?? remoteConfig.defaultConfig.id,
 					})
 				} else {
 					setRemoteConfig(remoteConfig.defaultConfig)

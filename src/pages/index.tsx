@@ -86,7 +86,10 @@ export default function Home() {
 						</p>
 
 						<div className="w-full sm:w-auto">
-							<EmailSignupForm id="home-hero"></EmailSignupForm>
+							<EmailSignupForm
+								id="home-hero"
+								configId={remoteConfig?.id}
+							></EmailSignupForm>
 						</div>
 
 						<div className="mt-12">
@@ -393,7 +396,10 @@ export default function Home() {
 							product join our mailing list{' '}
 						</p>
 						<div className="w-full sm:w-auto sm:mx-auto">
-							<EmailSignupForm id="home-cta"></EmailSignupForm>
+							<EmailSignupForm
+								id="home-cta"
+								configId={remoteConfig?.id}
+							></EmailSignupForm>
 						</div>
 					</div>
 				</div>

@@ -4,7 +4,7 @@ import Popup from './popup'
 import { useContext } from 'react'
 import FirebaseContext from '../../context/firebaseContext'
 
-const EmailSignupForm = ({ id }) => {
+const EmailSignupForm = ({ id, configId = '' }) => {
 	const firebase = useContext(FirebaseContext)
 
 	const [openSignupPopupConfig, setOpenSignupPopupConfig] = useState({
@@ -49,6 +49,7 @@ const EmailSignupForm = ({ id }) => {
 		}
 		firebase?.analytics().logEvent('signup_clicked', {
 			id: id,
+			configId: configId,
 		})
 
 		fetch('/api/signup', {
@@ -65,6 +66,7 @@ const EmailSignupForm = ({ id }) => {
 					if (!data?.error) {
 						firebase?.analytics().logEvent('signup_successful', {
 							id: id,
+							configId: configId,
 						})
 						didSignUp()
 					} else {
