@@ -2,11 +2,12 @@ import SocialIcons from '../components/shared/socialIcons'
 import EmailSignupForm from '../components/shared/emailSignupForm'
 import FeatureBox from '../components/home/featureBox'
 import Layout from '../components/shared/defaultLayout'
+import LinkButton from '../components/shared/linkButton'
 import { useLayoutEffect, useState, useEffect, useContext } from 'react'
 import FirebaseContext from '../context/firebaseContext'
 import ConfigContext from '../context/configContext'
 
-import { SearchIcon, CheckIcon } from '@heroicons/react/outline'
+import { SearchIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 
@@ -101,13 +102,11 @@ export default function Home() {
 			<section className="relative mt-10" id="features">
 				<img className="w-screen" src="/images/wave1_o.png" alt="" />
 				<div className="w-screen -mt-1 lg:-mt-10 py-10 sm:pt-0 bg-theme-blue">
-					<h2 className="text-white text-center mb-16 lg:mb-6">
-						Check out these features
-					</h2>
+					<h2 className="text-white text-center mb-16 lg:mb-0">Why CopDeck?</h2>
 					<div className="container-default grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-12 sm:gap-y-10 place-items-center">
 						<FeatureBox
-							title="Search sneakers"
-							description="Better a diamond with a flaw than a pebble without one."
+							title="Stop wasting time checking prices"
+							description="Use CopDeck's price comparison feature to see the best prices on the biggest reselling sites at a glance."
 							imagename="hero_edited"
 							className="order-1"
 							id="feature1"
@@ -115,8 +114,8 @@ export default function Home() {
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
 						<FeatureBox
-							title="Search sneakers"
-							description="Better a diamond with a flaw than a pebble without one."
+							title="Never miss a good deal"
+							description="Set price alerts and we'll notify you when prices move."
 							imagename="pricealert_edited"
 							className="lg:mt-12 order-2"
 							id="feature2"
@@ -124,50 +123,31 @@ export default function Home() {
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
 						<FeatureBox
-							title="Search sneakers"
-							description="Better a diamond with a flaw than a pebble without one."
+							title="Your spreadsheets on steroids"
+							description="Maintaining spreadsheets is cumbersome. With CopDeck, managing your inventory is a breeze."
 							imagename="inventory_edited"
 							className="lg:mt-44 order-3"
 							id="feature3"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
-						<div className="flex flex-col justify-center items-center lg:mb-16 order-6 lg:order-4">
+						<div className="flex flex-col max-w-xs justify-center items-center lg:mb-16 order-6 lg:order-4">
 							<div className="flex flex-col p-6 border-theme-orange border-2 rounded-lg">
-								<h4 className="text-white font-regular text-lg mb-3">Summary</h4>
-								<div className="flex flex-row justify-center items-center mb-3">
-									<CheckIcon className="text-white h-5 w-5"></CheckIcon>
-									<p className="ml-3 tracking-widest text-white">
-										Blah blah blah blah
-									</p>
-								</div>
+								<h4 className="text-white font-regular text-xl sm:text-2xl mb-3">
+									Interested?
+								</h4>
 
-								<div className="flex flex-row justify-center items-center mb-3">
-									<CheckIcon className="text-white h-5 w-5"></CheckIcon>
-									<p className="ml-3 tracking-widest text-white">
-										Blah blah blah blah
-									</p>
-								</div>
-
-								<div className="flex flex-row justify-center items-center mb-3">
-									<CheckIcon className="text-white h-5 w-5"></CheckIcon>
-									<p className="ml-3 tracking-widest text-white">
-										Blah blah blah blah
-									</p>
-								</div>
-
-								<div className="flex flex-row justify-center items-center mb-3">
-									<CheckIcon className="text-white h-5 w-5"></CheckIcon>
-									<p className="ml-3 tracking-widest text-white">
-										Blah blah blah blah
-									</p>
-								</div>
+								<p className="tracking-widest text-white mb-6">
+									Sign up for our newsletter and we'll let you know when the first
+									beta is out.
+								</p>
+								<LinkButton name="Sign me up!" link="#mailing-list"></LinkButton>
 							</div>
 						</div>
 
 						<FeatureBox
-							title="Search sneakers"
-							description="Better a diamond with a flaw than a pebble without one."
+							title="Show them what you got"
+							description="Share your inventory in our in-app feed or generate a shareable link to it."
 							imagename="feed_edited"
 							className="order-4 lg:order-5"
 							id="feature4"
@@ -175,8 +155,8 @@ export default function Home() {
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
 						<FeatureBox
-							title="Search sneakers"
-							description="Better a diamond with a flaw than a pebble without one."
+							title="Keep your finances in check"
+							description="See monthly financial statistics about your spendings and profits."
 							imagename="stats_edited"
 							className="lg:mt-8 order-5 lg:order-6"
 							id="feature5"
@@ -189,11 +169,11 @@ export default function Home() {
 			</section>
 			<section className="relative mt-4" id="testimonials">
 				<div className="container-default text-center mx-auto">
-					<h2 className="text-center mb-6 mt-6">Testimonials</h2>
+					<h2 className="text-center mb-6 mt-6">Here's what our fans say</h2>
 					<p className="text-center max-w-sm mx-auto">
-						If you like us, send a tweet with our twitter handle{' '}
-						<span className="text-theme-blue">@CopDeck</span> and we may feature your
-						tweet here!
+						We want to hear from you! Tag{' '}
+						<span className="text-theme-blue">@CopDeck</span> in your tweet, and we may
+						feature it here.
 					</p>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-8 sm:mt-24">
 						<div>
@@ -278,11 +258,18 @@ export default function Home() {
 					<div className="container-default grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 justify-center items-center py-16 md:py-24">
 						<div className="flex flex-col justify-center items-center md:items-start">
 							<h2 className="text-white text-center md:text-left mb-4">
-								Got questions? We've got answers.
+								If you were wondering...
 							</h2>
 							<p className="text-white text-center md:text-left">
-								This is a big one and i consider it one of the most important things
-								for a designer to get right.
+								Have more questions or feedback? Feel free to reach out on{' '}
+								<a className="underline" href={process.env.twitter}>
+									Twitter
+								</a>
+								, on the{' '}
+								<a className="underline" href="/contact">
+									Contact
+								</a>{' '}
+								page or just use the on-site chat in the bottom right corner.
 							</p>
 						</div>
 
@@ -357,7 +344,7 @@ export default function Home() {
 				</div>
 			</section>
 			<section className="container-default relative mt-16 md:mt-24" id="mission">
-				<h2 className="text-center mb-4">Our mission</h2>
+				<h2 className="text-center mb-4">Our vision</h2>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 justify-center items-center my-16 lg:my-20">
 					<img
@@ -374,9 +361,13 @@ export default function Home() {
 							Milan Lengyeltoti
 						</h4>
 						<p className="text-left">
-							Here goes the founder’s note about why this is the best thing since
-							sliced bread and why you’re passionate about this project. To learn more
-							about us, visit the About page.{' '}
+							Having been in the sneaker game for years, I became frustrated with the
+							difficulty of finding the best prices. Not to mention the countless
+							hours wasted managing spreadsheets to keep track of spendings and share
+							my inventory with potential buyers. I knew that there must be a better
+							way and my frustration sparked the idea of CopDeck. Our goal is to make
+							reselling and collecting sneakers easy and hassle-free for every
+							sneakerhead out there.
 						</p>
 					</div>
 				</div>
@@ -385,15 +376,16 @@ export default function Home() {
 				<div className="w-screen  bg-theme-blue">
 					<div className="container-default flex flex-col text-center justify-center items-center py-16 md:py-24">
 						<h3 className="text-base mb-6 font-semibold uppercase text-theme-orange tracking-widest">
-							Follow our journey
+							let's stay in touch
 						</h3>
 						<h4 className="text-white font-semibold text-4xl tracking-wider mb-6">
-							Want some updates?
+							Want to try CopDeck?
 						</h4>
 						<p className="max-w-md text-white mb-6">
 							CopDeck is not publicly available yet, but rest assured we’re hard at
-							work to change that. If you want to get exlusive updates about the
-							product join our mailing list{' '}
+							work to change that. Join our mailing list to get exclusive updates
+							about the beta version. As a bonus we'll also send you some tips on how
+							to level up your sneaker game.
 						</p>
 						<div className="w-full sm:w-auto sm:mx-auto">
 							<EmailSignupForm
