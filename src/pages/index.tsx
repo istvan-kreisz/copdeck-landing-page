@@ -50,7 +50,7 @@ export default function Home() {
 				<div className="relative  w-full flex  md:flex-row flex-col items-center justify-around">
 					<div className="flex flex-col items-center lg:pr-48 justify-center order-2 md:order-first lg:flex-grow w-full">
 						<img
-							className="object-cover w-64  object-center rounded transform -rotate-6"
+							className="object-cover w-64  object-center rounded transform lg:-rotate-6"
 							alt="App Preview"
 							src="/images/hero_edited.png"
 						/>
@@ -73,14 +73,20 @@ export default function Home() {
 							</a>
 						</Link> */}
 					</div>
-					<div className="ml-4 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+					<div className="flex-shrink ml-4 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
 						<h1 className="mb-4">Sneaker reselling made easy.</h1>
 						<p className="mb-12 sm:mb-20">
 							Ditch the spreadsheet. Price comparison, inventory management, price
 							alerts and a built in buy & sell feed.
 						</p>
-						<p className="text-xs mb-3">To get exclusive updates about updates:</p>
-						<LinkButton link="#mailing-list" name="Join our mailing list"></LinkButton>
+						<p className="text-xs font-medium text-gray-900 mb-3">
+							To get exclusive updates about updates:
+						</p>
+
+						<div className="w-full sm:w-auto">
+							<EmailSignupForm></EmailSignupForm>
+						</div>
+
 						<div className="mt-12">
 							<SocialIcons></SocialIcons>
 						</div>

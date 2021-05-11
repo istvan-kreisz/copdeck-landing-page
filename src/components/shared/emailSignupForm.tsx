@@ -72,11 +72,11 @@ const EmailSignupForm = () => {
 	return (
 		<form
 			onSubmit={sendClicked}
-			className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-5 md:justify-center"
+			className="flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-5 lg:justify-center"
 			action=""
 		>
 			<input
-				className={`ml-0 w-full h-12 md:h-auto sm:w-80 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 sm:px-3 leading-8 transition-colors duration-200 ease-in-out`}
+				className={`ml-0 w-full h-12 lg:h-auto sm:w-80 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 sm:px-3 leading-8 transition-colors duration-200 ease-in-out`}
 				ref={emailField}
 				placeholder="Type your email addess here"
 				type="email"
