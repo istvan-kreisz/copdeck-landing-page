@@ -347,17 +347,25 @@ export default function Home() {
 				<h2 className="text-center mb-4">Our vision</h2>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 justify-center items-center my-16 lg:my-20">
-					<img
-						className="object-cover  object-center rounded justify-self-center"
-						alt="Founder Photo"
-						src="https://dummyimage.com/355x520"
-					/>
+					<div className="relative w-72 sm:72 md:w-80 lg:w-96 mx-auto">
+						<img
+							className="object-cover object-center rounded justify-self-center"
+							alt="Founder Photo"
+							src="/images/milan2.jpg"
+						/>
+						<div
+							style={{
+								backgroundColor: 'rgba(13, 28, 38, 0.3)',
+							}}
+							className="rounded absolute top-0 left-0 bottom-0 right-0"
+						></div>
+					</div>
 
 					<div className="flex flex-col items-center md:items-start">
 						<h3 className="text-base mb-6 font-semibold uppercase text-theme-blue tracking-widest">
 							Co-Founder & Marketing guru
 						</h3>
-						<h4 className="font-semibold text-4xl tracking-wider mb-6">
+						<h4 className="font-semibold text-2xl sm:text-3xl lg:text-4xl tracking-wider mb-6">
 							Milan Lengyeltoti
 						</h4>
 						<p className="text-left">
@@ -379,7 +387,7 @@ export default function Home() {
 							let's stay in touch
 						</h3>
 						<h4 className="text-white font-semibold text-4xl tracking-wider mb-6">
-							Want to try CopDeck?
+							Interested?
 						</h4>
 						<p className="max-w-md text-white mb-6">
 							CopDeck is not publicly available yet, but rest assured we’re hard at
