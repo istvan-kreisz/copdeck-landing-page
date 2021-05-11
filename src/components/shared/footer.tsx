@@ -14,7 +14,7 @@ const Footer = (props) => {
 						</p>
 					</a>
 				</Link>
-				<SocialIcons></SocialIcons>
+				<SocialIcons id="footer"></SocialIcons>
 			</div>
 
 			<hr className="container-default border-blue-300 border-t-3" />

@@ -1,11 +1,17 @@
 import ArticleCard from '../components/blog/articleCard'
 import Layout from '../components/shared/defaultLayout'
 import matter from 'gray-matter'
-import { useState } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import FirebaseContext from '../context/firebaseContext'
 
 const Blog = ({ articles }) => {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [filters, setFilters] = useState([])
+	const firebase = useContext(FirebaseContext)
+
+	useEffect(() => {
+		firebase?.analytics().logEvent('visited_blog')
+	}, [])
 
 	const generateCards = (articles, searchTerm, filters) => {
 		if (articles && articles.length > 0) {

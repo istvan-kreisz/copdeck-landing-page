@@ -1,11 +1,17 @@
 import Layout from '../components/shared/defaultLayout'
-import { useRef, useState } from 'react'
 import InputButton from '../components/shared/inputButton'
 import Popup from '../components/shared/popup'
+import { useRef, useState, useEffect, useContext } from 'react'
+import FirebaseContext from '../context/firebaseContext'
 
 export default function Contact() {
 	const emailField = useRef<HTMLInputElement>()
 	const messageField = useRef<HTMLTextAreaElement>()
+	const firebase = useContext(FirebaseContext)
+
+	useEffect(() => {
+		firebase?.analytics().logEvent('visited_contact')
+	}, [])
 
 	const [popupConfig, setPopupConfig] = useState({
 		title: '',

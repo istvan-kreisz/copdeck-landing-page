@@ -1,8 +1,12 @@
 import { useRef, useState } from 'react'
 import InputButton from './inputButton'
 import Popup from './popup'
+import { useContext } from 'react'
+import FirebaseContext from '../../context/firebaseContext'
 
-const EmailSignupForm = () => {
+const EmailSignupForm = ({ id }) => {
+	const firebase = useContext(FirebaseContext)
+
 	const [openSignupPopupConfig, setOpenSignupPopupConfig] = useState({
 		title: '',
 		message: '',
@@ -43,6 +47,9 @@ const EmailSignupForm = () => {
 		if (!email) {
 			return
 		}
+		firebase?.analytics().logEvent('signup_clicked', {
+			id: id,
+		})
 
 		fetch('/api/signup', {
 			method: 'POST',
@@ -55,16 +62,31 @@ const EmailSignupForm = () => {
 			.then(async (response) => {
 				try {
 					const data = await response.json()
-					if (!data.error) {
+					if (!data?.error) {
+						firebase?.analytics().logEvent('signup_successful', {
+							id: id,
+						})
 						didSignUp()
 					} else {
-						signupFailed(data.error)
+						firebase?.analytics().logEvent('signup_failed', {
+							id: id,
+							error: data.error?.message ?? 'Unknown Error Type1',
+						})
+						signupFailed(data?.error)
 					}
 				} catch (error) {
+					firebase?.analytics().logEvent('signup_failed', {
+						id: id,
+						error: error?.message ?? 'Unknown Error Type2',
+					})
 					signupFailed(error)
 				}
 			})
 			.catch((err) => {
+				firebase?.analytics().logEvent('signup_failed', {
+					id: id,
+					error: err?.message ?? 'Unknown Error Type3',
+				})
 				signupFailed(err)
 			})
 	}

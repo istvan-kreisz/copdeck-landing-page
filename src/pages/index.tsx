@@ -1,16 +1,21 @@
 import SocialIcons from '../components/shared/socialIcons'
-import LinkButton from '../components/shared/linkButton'
 import EmailSignupForm from '../components/shared/emailSignupForm'
 import FeatureBox from '../components/home/featureBox'
 import Layout from '../components/shared/defaultLayout'
-import { useLayoutEffect, useState } from 'react'
+import { useLayoutEffect, useState, useEffect, useContext } from 'react'
+import FirebaseContext from '../context/firebaseContext'
 
-import { ArrowCircleRightIcon, SearchIcon, CheckIcon } from '@heroicons/react/outline'
+import { SearchIcon, CheckIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 
 export default function Home() {
 	const [arrows, setArrows] = useState<any>()
+	const firebase = useContext(FirebaseContext)
+
+	useEffect(() => {
+		firebase?.analytics().logEvent('visited_home')
+	}, [])
 
 	useLayoutEffect(() => {
 		const tawkSource = 'https://embed.tawk.to/60992321b1d5182476b7784f/1f5b32ffa'
@@ -84,11 +89,11 @@ export default function Home() {
 						</p>
 
 						<div className="w-full sm:w-auto">
-							<EmailSignupForm></EmailSignupForm>
+							<EmailSignupForm id="home-hero"></EmailSignupForm>
 						</div>
 
 						<div className="mt-12">
-							<SocialIcons></SocialIcons>
+							<SocialIcons id="home-hero"></SocialIcons>
 						</div>
 					</div>
 				</div>
@@ -391,7 +396,7 @@ export default function Home() {
 							product join our mailing list{' '}
 						</p>
 						<div className="w-full sm:w-auto sm:mx-auto">
-							<EmailSignupForm></EmailSignupForm>
+							<EmailSignupForm id="home-cta"></EmailSignupForm>
 						</div>
 					</div>
 				</div>

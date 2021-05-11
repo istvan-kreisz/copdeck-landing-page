@@ -6,10 +6,20 @@ import Link from 'next/link'
 import { ArrowLeftIcon } from '@heroicons/react/outline'
 import EmailSignupForm from '../../components/shared/emailSignupForm'
 import Meta from '../../components/shared/meta'
+import { useEffect, useContext } from 'react'
+import FirebaseContext from '../../context/firebaseContext'
 
 import { FacebookShareButton, TwitterShareButton } from 'react-share'
 
 export default function BlogPost({ frontmatter, markdownBody, postname }) {
+	const firebase = useContext(FirebaseContext)
+
+	useEffect(() => {
+		firebase?.analytics().logEvent('visited_blogpost', {
+			title: frontmatter?.title,
+		})
+	}, [])
+
 	return (
 		<div>
 			{/* todo: what to use for title & description? */}
@@ -64,6 +74,11 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 							url={window ? window?.location?.href : ''}
 							resetButtonStyle={false}
 							className="focus:outline-none"
+							beforeOnClick={() => {
+								firebase?.analytics().logEvent('twitter_share_clicked', {
+									title: frontmatter?.title,
+								})
+							}}
 						>
 							<img alt="Twitter Link" className="h-6" src="/images/twitter.svg" />
 						</TwitterShareButton>
@@ -75,6 +90,11 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 							hashtag="#copdeck"
 							resetButtonStyle={false}
 							className="focus:outline-none"
+							beforeOnClick={() => {
+								firebase?.analytics().logEvent('fb_share_clicked', {
+									title: frontmatter?.title,
+								})
+							}}
 						>
 							<img alt="Facebook Link" className="h-6" src="/images/facebook.svg" />
 						</FacebookShareButton>
@@ -92,7 +112,7 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 					</p>
 
 					<div className="w-full sm:w-auto sm:mx-auto">
-						<EmailSignupForm></EmailSignupForm>
+						<EmailSignupForm id="post"></EmailSignupForm>
 					</div>
 				</div>
 			</footer>

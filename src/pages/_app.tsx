@@ -1,8 +1,9 @@
 import '../styles/globals.css'
 import { AppProps } from 'next/app'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/analytics'
+import FirebaseContext from '../context/firebaseContext'
 
 const firebaseConfig = {
 	apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -15,15 +16,22 @@ const firebaseConfig = {
 	measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 }
 
-if (!firebase.apps.length) {
-	firebase.initializeApp(firebaseConfig)
-}
-
 function App({ Component, pageProps }: AppProps) {
+	const [firebaseApp, setFirebaseApp] = useState(null)
+
 	useEffect(() => {
+		if (!firebase.apps.length) {
+			firebase.initializeApp(firebaseConfig)
+		}
 		firebase.analytics()
+
+		setFirebaseApp(firebase)
 	}, [])
-	return <Component {...pageProps} />
+	return (
+		<FirebaseContext.Provider value={firebaseApp}>
+			<Component {...pageProps} />
+		</FirebaseContext.Provider>
+	)
 }
 
 export default App

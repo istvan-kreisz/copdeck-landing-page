@@ -1,7 +1,14 @@
-import SocialIcons from '../components/shared/socialIcons'
 import Layout from '../components/shared/defaultLayout'
+import { useContext, useEffect } from 'react'
+import FirebaseContext from '../context/firebaseContext'
 
 export default function About() {
+	const firebase = useContext(FirebaseContext)
+
+	useEffect(() => {
+		firebase?.analytics().logEvent('visited_about')
+	}, [])
+
 	return (
 		<Layout>
 			<section className="container-default mt-2 lg:mt-4">
