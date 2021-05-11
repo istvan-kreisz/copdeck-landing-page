@@ -15,10 +15,9 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
 	try {
 		const result = await new Promise((resolve, reject) => {
-			// cors(req, res, () => {
 			const mailOptions = {
 				from: process.env.CONTACT_EMAIL,
-				to: `${process.env.CONTACT_EMAIL}, ${''}`,
+				to: `${process.env.CONTACT_EMAIL}, ${process.env.CONTACT_EMAIL_2}`,
 				subject: `CopDeck Message`,
 				html: `<p style="font-size: 16px;">${req.body.message}</p>
                 <br />
@@ -39,7 +38,6 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 					resolve({})
 				}
 			})
-			// })
 		})
 		res.status(200).json(result)
 	} catch (err) {

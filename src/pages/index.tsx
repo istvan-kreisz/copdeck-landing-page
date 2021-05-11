@@ -40,7 +40,7 @@ export default function Home() {
 				<div className="relative  w-full flex  md:flex-row flex-col items-center justify-around">
 					<div className="flex flex-col items-center lg:pr-48 justify-center order-2 md:order-first lg:flex-grow w-full">
 						<img
-							className="object-cover w-64  object-center rounded"
+							className="object-cover w-64  object-center rounded transform -rotate-6"
 							alt="App Preview"
 							src="/images/hero_edited.png"
 						/>
