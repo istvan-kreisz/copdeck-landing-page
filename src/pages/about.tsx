@@ -15,11 +15,19 @@ export default function About() {
 			</section>
 			<section className="container-default grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 justify-center items-center my-20 lg:my-24">
 				<div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
-					<img
-						className="object-cover  object-center rounded justify-self-center"
-						alt="Founder Photo"
-						src="https://dummyimage.com/378x453"
-					/>
+					<a href={process.env.twitterML} className="relative">
+						<img
+							className="object-cover w-96  object-center rounded justify-self-center"
+							alt="Founder Photo"
+							src="/images/milan.jpg"
+						/>
+						<div
+							style={{
+								backgroundColor: 'rgba(13, 28, 38, 0.2)',
+							}}
+							className="rounded absolute top-0 left-0 bottom-0 right-0"
+						></div>
+					</a>
 
 					<h3 className="font-semibold text-2xl tracking-wider mb-5 mt-6">
 						Milan Lengyeltoti
@@ -32,21 +40,24 @@ export default function About() {
 						bread and why you’re passionate about this project. To learn more about us,
 						visit the About page.{' '}
 					</p>
-					<SocialIcons
-						twitter={process.env.twitterML}
-						instagram={process.env.instagramML}
-						facebook={process.env.facebookML}
-					></SocialIcons>
 				</div>
 				<div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
-					<img
-						className="object-cover  object-center rounded justify-self-center"
-						alt="Founder Photo"
-						src="https://dummyimage.com/378x453"
-					/>
+					<a href={process.env.twitterIK} className="relative">
+						<img
+							className="object-cover w-96  object-center rounded justify-self-center"
+							alt="Founder Photo"
+							src="/images/istvan.jpg"
+						/>
+						<div
+							style={{
+								backgroundColor: 'rgba(13, 28, 38, 0.2)',
+							}}
+							className="rounded absolute top-0 left-0 bottom-0 right-0"
+						></div>
+					</a>
 
 					<h3 className="font-semibold text-2xl tracking-wider mb-5 mt-6">
-						Milan Lengyeltoti
+						Istvan Kreisz
 					</h3>
 					<h4 className="text-base mb-5 font-semibold uppercase text-theme-blue tracking-widest">
 						Co-Founder & Marketing guru
@@ -56,11 +67,6 @@ export default function About() {
 						bread and why you’re passionate about this project. To learn more about us,
 						visit the About page.{' '}
 					</p>
-					<SocialIcons
-						twitter={process.env.twitterIK}
-						instagram={process.env.instagramIK}
-						facebook={process.env.facebookIK}
-					></SocialIcons>
 				</div>
 			</section>
 		</Layout>

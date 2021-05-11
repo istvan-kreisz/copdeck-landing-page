@@ -3,13 +3,15 @@ import LinkButton from '../components/shared/linkButton'
 import EmailSignupForm from '../components/shared/emailSignupForm'
 import FeatureBox from '../components/home/featureBox'
 import Layout from '../components/shared/defaultLayout'
-import { useLayoutEffect } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 import { ArrowCircleRightIcon, SearchIcon, CheckIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 
 export default function Home() {
+	const [arrows, setArrows] = useState<any>()
+
 	useLayoutEffect(() => {
 		const tawkSource = 'https://embed.tawk.to/60992321b1d5182476b7784f/1f5b32ffa'
 		const scripts = Array.from(window.document.body.querySelectorAll('script'))
@@ -29,10 +31,18 @@ export default function Home() {
 		script.setAttribute('crossorigin', '*')
 		firstScript.parentNode.insertBefore(script, firstScript)
 
+		if (!arrows) {
+			setArrows(require('react-arrows'))
+		}
+
 		return () => {
 			script?.parentNode?.removeChild(script)
 		}
 	}, [])
+
+	// if (typeof window === 'undefined') {
+	// 	global.window = {}
+	// }
 
 	return (
 		<Layout>
@@ -89,6 +99,7 @@ export default function Home() {
 							description="Better a diamond with a flaw than a pebble without one."
 							imagename="hero_edited"
 							className="order-1"
+							id="feature1"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -97,6 +108,7 @@ export default function Home() {
 							description="Better a diamond with a flaw than a pebble without one."
 							imagename="pricealert_edited"
 							className="lg:mt-12 order-2"
+							id="feature2"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -105,6 +117,7 @@ export default function Home() {
 							description="Better a diamond with a flaw than a pebble without one."
 							imagename="inventory_edited"
 							className="lg:mt-44 order-3"
+							id="feature3"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -146,6 +159,7 @@ export default function Home() {
 							description="Better a diamond with a flaw than a pebble without one."
 							imagename="feed_edited"
 							className="order-4 lg:order-5"
+							id="feature4"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -154,6 +168,7 @@ export default function Home() {
 							description="Better a diamond with a flaw than a pebble without one."
 							imagename="stats_edited"
 							className="lg:mt-8 order-5 lg:order-6"
+							id="feature5"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
