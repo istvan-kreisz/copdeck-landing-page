@@ -2,7 +2,7 @@ module.exports = {
 	// todo
 	env: {
 		siteName: 'CopDeck',
-		title: 'Sneaker reselling made easy | CopDeck',
+		title: "It's how you buy & sell sneakers | CopDeck",
 		description: 'page description',
 		twitterHandle: 'IKreisz',
 		twitter: 'https://www.twitter.com/IKreisz',
