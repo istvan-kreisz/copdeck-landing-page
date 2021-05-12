@@ -124,13 +124,11 @@ export async function getStaticProps({ params }) {
 	const { postname } = params
 
 	const content = await import(`../../posts/${postname}.md`)
+	if (!content) return { notFound: true }
+
 	const data = matter(content.default)
 
-	if (!data) {
-		return {
-			notFound: true,
-		}
-	}
+	if (!data) return { notFound: true }
 
 	return {
 		props: {
