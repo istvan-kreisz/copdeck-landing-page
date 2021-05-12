@@ -12,9 +12,8 @@ const ArticleCard = (props) => {
 					<div className="relative">
 						<img
 							className="w-full object-cover object-center rounded-3xl justify-self-center"
-							src="https://dummyimage.com/350x420"
 							alt="Post Preview"
-							// src={'images/posts/' + props.slug + '/' + props.slug + '-thumbnail.jpg'} // todo: delete
+							src={'images/posts/' + props.slug + '/' + props.slug + '-thumbnail.jpg'}
 						/>
 						<div className="bg-theme-orange group-hover:bg-theme-orange-dark h-12 w-12 rounded-xl flex items-center absolute bottom-5 right-5">
 							<ArrowRightIcon
