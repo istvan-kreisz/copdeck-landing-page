@@ -1,6 +1,7 @@
 import SocialIcons from '../components/shared/socialIcons'
 import EmailSignupForm from '../components/shared/emailSignupForm'
 import FeatureBox from '../components/home/featureBox'
+import DropdownMenu from '../components/home/dropdownMenu'
 import Layout from '../components/shared/defaultLayout'
 import LinkButton from '../components/shared/linkButton'
 import { useLayoutEffect, useState, useEffect, useContext } from 'react'
@@ -53,7 +54,7 @@ export default function Home() {
 	return (
 		<Layout>
 			<section className="container-default mt-2 lg:mt-4">
-				<div className="relative  w-full flex  md:flex-row flex-col items-center justify-around">
+				<div className="relative space-x-12  w-full flex  md:flex-row flex-col items-center justify-around">
 					<div className="flex flex-col items-center lg:pr-48 justify-center order-2 md:order-first lg:flex-grow w-full">
 						<img
 							className="object-cover w-64  object-center rounded transform lg:-rotate-6"
@@ -102,7 +103,9 @@ export default function Home() {
 			<section className="relative mt-10" id="features">
 				<img className="w-screen" src="/images/wave1_o.png" alt="" />
 				<div className="w-screen -mt-1 lg:-mt-10 py-10 sm:pt-0 bg-theme-blue">
-					<h2 className="text-white text-center mb-16 lg:mb-0">Why CopDeck?</h2>
+					<h2 className="text-white text-center mb-16 lg:mb-0">
+						Made for resellers and collectors
+					</h2>
 					<div className="container-default grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-12 sm:gap-y-10 place-items-center">
 						<FeatureBox
 							title="Stop wasting time checking prices"
@@ -132,34 +135,37 @@ export default function Home() {
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
 						<div className="flex flex-col max-w-xs justify-center items-center lg:mb-16 order-6 lg:order-4">
-							<div className="flex flex-col p-6 border-theme-orange border-2 rounded-lg">
+							<div className="flex space-y-8 flex-col p-6 border-theme-orange border-2 rounded-lg">
 								<h4 className="text-white font-regular text-xl sm:text-2xl mb-3">
-									Interested?
+									It doesn't get much easier than that!
 								</h4>
 
-								<p className="tracking-widest text-white mb-6">
+								{/* <p className="tracking-widest text-white mb-6">
 									Sign up for our newsletter and we'll let you know when the first
 									beta is out.
-								</p>
-								<LinkButton name="Sign me up!" link="#mailing-list"></LinkButton>
+								</p> */}
+								<LinkButton
+									name="Sign up for the beta"
+									link="#mailing-list"
+								></LinkButton>
 							</div>
 						</div>
 
+						<FeatureBox
+							title="Keep your finances in check"
+							description="See monthly financial statistics about your spendings and profits."
+							imagename="stats_edited"
+							className="lg:mt-8 order-5 lg:order-4"
+							id="feature5"
+						>
+							<SearchIcon></SearchIcon>
+						</FeatureBox>
 						<FeatureBox
 							title="Show them what you got"
 							description="Share your inventory in our in-app feed or generate a shareable link to it."
 							imagename="feed_edited"
 							className="order-4 lg:order-5"
 							id="feature4"
-						>
-							<SearchIcon></SearchIcon>
-						</FeatureBox>
-						<FeatureBox
-							title="Keep your finances in check"
-							description="See monthly financial statistics about your spendings and profits."
-							imagename="stats_edited"
-							className="lg:mt-8 order-5 lg:order-6"
-							id="feature5"
 						>
 							<SearchIcon></SearchIcon>
 						</FeatureBox>
@@ -274,71 +280,9 @@ export default function Home() {
 						</div>
 
 						<div className="flex flex-col space-y-4">
-							<Disclosure>
-								{({ open }) => (
-									<>
-										<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
-											<div className="flex flex-row w-full justify-between items-center">
-												<span className="text-sm md:text-base">
-													What is your refund policy?
-												</span>
-												<ChevronUpIcon
-													className={`${
-														open ? 'transform rotate-180' : ''
-													} w-8 h-8 text-theme-blue`}
-												/>
-											</div>
-											<Disclosure.Panel className="pt-4 pb-2 text-sm">
-												If you're unhappy with your purchase for any reason,
-												email us within 90 days and we'll refund you in
-												full, no questions asked.
-											</Disclosure.Panel>
-										</Disclosure.Button>
-									</>
-								)}
-							</Disclosure>
-							<Disclosure>
-								{({ open }) => (
-									<>
-										<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
-											<div className="flex flex-row w-full justify-between items-center">
-												<span>What is your refund policy?</span>
-												<ChevronUpIcon
-													className={`${
-														open ? 'transform rotate-180' : ''
-													} w-8 h-8 text-theme-blue`}
-												/>
-											</div>
-											<Disclosure.Panel className="pt-4 pb-2 text-sm">
-												If you're unhappy with your purchase for any reason,
-												email us within 90 days and we'll refund you in
-												full, no questions asked.
-											</Disclosure.Panel>
-										</Disclosure.Button>
-									</>
-								)}
-							</Disclosure>
-							<Disclosure>
-								{({ open }) => (
-									<>
-										<Disclosure.Button className="flex flex-col w-full px-6 py-5 text-base font-medium text-left bg-white rounded-2xl hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-600 focus-visible:ring-opacity-75">
-											<div className="flex flex-row w-full justify-between items-center">
-												<span>What is your refund policy?</span>
-												<ChevronUpIcon
-													className={`${
-														open ? 'transform rotate-180' : ''
-													} w-8 h-8 text-theme-blue`}
-												/>
-											</div>
-											<Disclosure.Panel className="pt-4 pb-2 text-sm">
-												If you're unhappy with your purchase for any reason,
-												email us within 90 days and we'll refund you in
-												full, no questions asked.
-											</Disclosure.Panel>
-										</Disclosure.Button>
-									</>
-								)}
-							</Disclosure>
+							<DropdownMenu title="asdsd" description="122323"></DropdownMenu>
+							<DropdownMenu title="asdsd" description="122323"></DropdownMenu>
+							<DropdownMenu title="asdsd" description="122323"></DropdownMenu>
 						</div>
 					</div>
 				</div>
