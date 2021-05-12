@@ -121,22 +121,20 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 }
 
 export async function getStaticProps({ params }) {
-	const { postname } = params
+	// const { postname } = params
+	// const content = await import(`../../posts/${postname}.md`)
+	// if (!content) return { notFound: true }
+	// const data = matter(content.default)
+	// if (!data) return { notFound: true }
+	// return {
+	// 	props: {
+	// 		frontmatter: data.data,
+	// 		markdownBody: data.content,
+	// 		postname: postname,
+	// 	},
+	// }
 
-	const content = await import(`../../posts/${postname}.md`)
-	if (!content) return { notFound: true }
-
-	const data = matter(content.default)
-
-	if (!data) return { notFound: true }
-
-	return {
-		props: {
-			frontmatter: data.data,
-			markdownBody: data.content,
-			postname: postname,
-		},
-	}
+	return { notFound: true }
 }
 
 export async function getStaticPaths() {
