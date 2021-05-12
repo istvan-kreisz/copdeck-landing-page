@@ -136,7 +136,7 @@ export default function Home() {
 						</FeatureBox>
 						<div className="flex flex-col max-w-xs justify-center items-center lg:mb-16 order-6 lg:order-4">
 							<div className="flex space-y-8 flex-col p-6 border-theme-orange border-2 rounded-lg">
-								<h4 className="text-white font-regular text-xl sm:text-2xl mb-3">
+								<h4 className="text-white font-regular text-center text-xl sm:text-2xl">
 									It doesn't get much easier than that!
 								</h4>
 

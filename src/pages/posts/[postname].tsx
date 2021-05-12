@@ -126,6 +126,12 @@ export async function getStaticProps({ params }) {
 	const content = await import(`../../posts/${postname}.md`)
 	const data = matter(content.default)
 
+	if (!data) {
+		return {
+			notFound: true,
+		}
+	}
+
 	return {
 		props: {
 			frontmatter: data.data,
@@ -145,7 +151,7 @@ export async function getStaticPaths() {
 		return data
 	})(require.context('../../posts', true, /\.md$/))
 
-	const paths = blogSlugs.map((slug) => `/posts/${slug}`)
+	const paths = blogSlugs?.map((slug) => `/posts/${slug}`) ?? []
 
 	return {
 		paths,
