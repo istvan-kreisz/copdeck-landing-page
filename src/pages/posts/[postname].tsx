@@ -140,19 +140,23 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-	const blogSlugs = ((context) => {
-		const keys = context.keys()
-		const data = keys.map((key, index) => {
-			let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
-			return slug
-		})
-		return data
-	})(require.context('../../posts', true, /\.md$/))
+	// const blogSlugs = ((context) => {
+	// 	const keys = context.keys()
+	// 	const data = keys.map((key, index) => {
+	// 		let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
+	// 		return slug
+	// 	})
+	// 	return data
+	// })(require.context('../../posts', true, /\.md$/))
+	// const paths = blogSlugs?.map((slug) => `/posts/${slug}`) ?? []
+	// return {
+	// 	paths,
+	// 	fallback: false,
+	// }
 
-	const paths = blogSlugs?.map((slug) => `/posts/${slug}`) ?? []
-
+	// todo
 	return {
-		paths,
+		paths: [],
 		fallback: false,
 	}
 }
