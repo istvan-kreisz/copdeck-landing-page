@@ -112,7 +112,7 @@ export default function Home() {
 							className="order-1"
 							id="feature1"
 						>
-							<SearchIcon></SearchIcon>
+							<img className="h-9 w-9" src="/images/logo_orange.svg" alt="logo" />
 						</FeatureBox>
 						<FeatureBox
 							title="Never miss a good deal"
@@ -121,7 +121,7 @@ export default function Home() {
 							className="lg:mt-12 order-2"
 							id="feature2"
 						>
-							<SearchIcon></SearchIcon>
+							<img className="h-9 w-9" src="/images/logo_orange.svg" alt="logo" />
 						</FeatureBox>
 						<FeatureBox
 							title="Your spreadsheets on steroids"
@@ -130,7 +130,7 @@ export default function Home() {
 							className="lg:mt-44 order-3"
 							id="feature3"
 						>
-							<SearchIcon></SearchIcon>
+							<img className="h-9 w-9" src="/images/logo_orange.svg" alt="logo" />
 						</FeatureBox>
 						<div className="flex flex-col max-w-xs justify-center items-center lg:mb-16 order-6 lg:order-4">
 							<div className="flex space-y-8 flex-col p-6 border-theme-orange border-2 rounded-lg">
@@ -156,7 +156,7 @@ export default function Home() {
 							className="lg:mt-8 order-5 lg:order-4"
 							id="feature5"
 						>
-							<SearchIcon></SearchIcon>
+							<img className="h-9 w-9" src="/images/logo_orange.svg" alt="logo" />
 						</FeatureBox>
 						<FeatureBox
 							title="Show them what you got"
@@ -165,7 +165,7 @@ export default function Home() {
 							className="order-4 lg:order-5"
 							id="feature4"
 						>
-							<SearchIcon></SearchIcon>
+							<img className="h-9 w-9" src="/images/logo_orange.svg" alt="logo" />
 						</FeatureBox>
 					</div>
 				</div>
