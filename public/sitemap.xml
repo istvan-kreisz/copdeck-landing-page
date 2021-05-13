@@ -15,4 +15,8 @@
     <loc>https://copdeck.com</loc>
     <changefreq>hourly</changefreq>
   </url>
+  <url>
+    <loc>https://copdeck.com/posts/[postname]</loc>
+    <changefreq>hourly</changefreq>
+  </url>
 </urlset>

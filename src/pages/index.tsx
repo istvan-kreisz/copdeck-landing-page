@@ -9,8 +9,6 @@ import FirebaseContext from '../context/firebaseContext'
 import ConfigContext from '../context/configContext'
 
 import { SearchIcon } from '@heroicons/react/outline'
-import { Disclosure } from '@headlessui/react'
-import { ChevronUpIcon } from '@heroicons/react/solid'
 
 export default function Home() {
 	const [arrows, setArrows] = useState<any>()
@@ -261,28 +259,48 @@ export default function Home() {
 			</section>
 			<section className="relative mt-24" id="q&a">
 				<div className="w-screen  bg-theme-blue">
-					<div className="container-default grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 justify-center items-center py-16 md:py-24">
-						<div className="flex flex-col justify-center items-center md:items-start">
-							<h2 className="text-white text-center md:text-left mb-4">
-								If you were wondering...
-							</h2>
-							<p className="text-white text-center md:text-left">
-								Have more questions or feedback? Feel free to reach out on{' '}
-								<a className="underline" href={process.env.twitter}>
-									Twitter
-								</a>
-								, on the{' '}
-								<a className="underline" href="/contact">
-									Contact
-								</a>{' '}
-								page or just use the on-site chat in the bottom right corner.
-							</p>
-						</div>
+					<div className="container-default flex flex-col text-center justify-center items-center py-16 md:py-24">
+						<h2 className="text-white font-semibold text-4xl tracking-wider mb-6">
+							If you were wondering...
+						</h2>
+						<p className="max-w-md text-white mb-6">
+							Have more questions or feedback? Feel free to reach out on{' '}
+							<a className="underline" href={process.env.twitter}>
+								Twitter
+							</a>
+							, on the{' '}
+							<a className="underline" href="/contact">
+								Contact
+							</a>{' '}
+							page or just use the on-site chat in the bottom right corner.
+						</p>
 
-						<div className="flex flex-col space-y-4">
-							<DropdownMenu title="asdsd" description="122323"></DropdownMenu>
-							<DropdownMenu title="asdsd" description="122323"></DropdownMenu>
-							<DropdownMenu title="asdsd" description="122323"></DropdownMenu>
+						<div className="container-default grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-start mt-10">
+							<DropdownMenu
+								title="How can I become a beta tester?"
+								description="If you are interested in beta testing, please sign up for our mailing list at the top of our page. We will let you know when spots are open."
+							></DropdownMenu>
+							<DropdownMenu
+								title="When will CopDeck be released to the public?"
+								description="We are working hard to bring you the CopDeck experience as soon as possible. Our currently planned public launch is set for late summer."
+							></DropdownMenu>
+							<DropdownMenu
+								title="How does the feed work?"
+								description="The CopDeck feed is our in-app board where anyone can post their sneakers that they're looking to sell. Changes you make to your items (e.g. changing status to sold) will be automatically reflected on the board. All posts will have a shareable link that you can send to anyone even if they don't have the CopDeck app."
+							></DropdownMenu>
+							<DropdownMenu
+								title="How much will CopDeck cost?"
+								description="CopDeck will have a small monthly fee that should be affordable to all users. Join our beta program for a special offer!"
+							></DropdownMenu>
+							<DropdownMenu
+								title="I'm a reseller, how will CopDeck help me?"
+								description="CopDeck keeps track of your inventory with continuously updated market prices and makes your inventory easily shareable either in app or via a shareable link. It finds the best possible prices for your items so you can maximize your profits and save time by having it do the work for you. Say goodbye to complicated spreadsheets."
+							></DropdownMenu>
+							<DropdownMenu
+								title="I'm a collector, how will CopDeck help me?"
+								description="CopDeck shows you the latest prices on any sneaker, so you know right away if you're getting a good deal. It allows you to digitalize your inventory and track how your grails are doing on the market."
+							></DropdownMenu>
+							{/* </div> */}
 						</div>
 					</div>
 				</div>
