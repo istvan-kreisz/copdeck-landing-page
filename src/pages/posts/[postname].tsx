@@ -22,8 +22,7 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 
 	return (
 		<div>
-			{/* todo: what to use for title & description? */}
-			<Meta title="" description=""></Meta>
+			<Meta></Meta>
 			<header className="container-default">
 				<div className="group cursor-pointer my-12">
 					<Link href="/blog">

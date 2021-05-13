@@ -176,8 +176,10 @@ export default function Home() {
 					<h2 className="text-center mb-6 mt-6">Here's what our fans say</h2>
 					<p className="text-center max-w-sm mx-auto">
 						We want to hear from you! Tag{' '}
-						<span className="text-theme-blue">@CopDeck</span> in your tweet, and we may
-						feature it here.
+						<a href={process.env.twitter} className="text-theme-blue">
+							@{process.env.twitterHandle}
+						</a>{' '}
+						in your tweet, and we may feature it here.
 					</p>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-8 sm:mt-24">
 						<div>

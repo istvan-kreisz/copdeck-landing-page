@@ -8,7 +8,7 @@ const Footer = (props) => {
 				<Link href="/">
 					<a aria-label="Home" className="flex items-center">
 						<span className="sr-only">Icon</span>
-						<img alt="Logo" className="sm:w-12 w-10" src="/images/logo5.svg" />
+						<img alt="Logo" className="sm:w-12 w-10" src="/images/logo.svg" />
 						<p className="ml-3 hidden sm:block font-semibold text-base sm:text-lg text-gray-800">
 							CopDeck
 						</p>

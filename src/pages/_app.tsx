@@ -34,9 +34,10 @@ function App({ Component, pageProps }: AppProps) {
 		}
 
 		remoteConfig.defaultConfig = {
-			title: 'Welcome',
-			subtitle: 'this is some text',
-			id: 'default',
+			title: 'Be on top of your sneaker game',
+			subtitle:
+				"We've taken the guesswork out of buying and selling sneakers. Ditch the spreadsheet and hours of manual price comparisons. Maximize profits and save time. Manage and share your inventory with ease.",
+			id: 'first',
 		}
 		remoteConfig
 			.fetchAndActivate()

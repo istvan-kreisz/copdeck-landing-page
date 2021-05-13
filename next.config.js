@@ -1,13 +1,13 @@
 module.exports = {
-	// todo
 	env: {
 		siteName: 'CopDeck',
-		title: "It's how you buy & sell sneakers | CopDeck",
-		description: 'page description',
-		twitterHandle: 'IKreisz',
-		twitter: 'https://www.twitter.com/IKreisz',
-		instagram: 'https://instagram.com/kreiszistvan',
-		facebook: 'https://www.facebook.com/kreisz.istvan',
+		title: 'Be on top of your sneaker game | CopDeck',
+		description:
+			"We've taken the guesswork out of buying and selling sneakers. Ditch the spreadsheet and hours of manual price comparisons. Maximize profits and save time. Manage and share your inventory with ease.",
+		twitterHandle: 'CopDeck_',
+		twitter: 'https://twitter.com/CopDeck_',
+		instagram: 'https://www.instagram.com/copdeck/',
+		facebook: 'https://www.facebook.com/CopDeck',
 		twitterIK: 'https://www.twitter.com/IKreisz',
 		instagramIK: 'https://instagram.com/kreiszistvan',
 		facebookIK: 'https://www.facebook.com/kreisz.istvan',
