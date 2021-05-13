@@ -36,6 +36,16 @@ class MyDocument extends Document {
 					<link rel="manifest" href="/images/favicon/site.webmanifest" />
 					<meta name="msapplication-TileColor" content="#da532c" />
 					<meta name="theme-color" content="#ffffff" />
+					<script
+						async
+						src="https://platform.twitter.com/widgets.js"
+						charSet="utf-8"
+					></script>
+					<script src="/mailerlite.js" type="text/javascript"></script>
+					<script
+						src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c"
+						type="text/javascript"
+					></script>
 				</Head>
 
 				<body>

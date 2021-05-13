@@ -47,7 +47,11 @@ export default function Home() {
 		}
 	}, [])
 
-	console.log(remoteConfig)
+	function ml_webform_success_4083562() {
+		console.log('yaaaaaaaassss')
+		console.log('yaaaaaaaassss')
+		console.log('yaaaaaaaassss')
+	}
 
 	return (
 		<Layout>
@@ -195,11 +199,6 @@ export default function Home() {
 									April 29, 2021
 								</a>
 							</blockquote>{' '}
-							<script
-								async
-								src="https://platform.twitter.com/widgets.js"
-								charSet="utf-8"
-							></script>
 						</div>
 						<div className="lg:mt-10 lg:ml-16 md:mt-5 md:ml-8">
 							<blockquote className="twitter-tweet tw-align-center">
@@ -213,11 +212,6 @@ export default function Home() {
 									November 3, 2020
 								</a>
 							</blockquote>{' '}
-							<script
-								async
-								src="https://platform.twitter.com/widgets.js"
-								charSet="utf-8"
-							></script>
 						</div>
 						<div className="md:mt-2">
 							<blockquote className="twitter-tweet tw-align-center">
@@ -231,11 +225,6 @@ export default function Home() {
 									November 3, 2020
 								</a>
 							</blockquote>{' '}
-							<script
-								async
-								src="https://platform.twitter.com/widgets.js"
-								charSet="utf-8"
-							></script>
 						</div>
 						<div className="lg:mt-10 md:mt-5">
 							<blockquote className="twitter-tweet tw-align-center">
@@ -250,11 +239,6 @@ export default function Home() {
 									April 29, 2021
 								</a>
 							</blockquote>{' '}
-							<script
-								async
-								src="https://platform.twitter.com/widgets.js"
-								charSet="utf-8"
-							></script>
 						</div>
 					</div>
 				</div>
