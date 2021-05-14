@@ -45,11 +45,9 @@ function App({ Component, pageProps }: AppProps) {
 				if (process.env.NODE_ENV === 'development') {
 					console.log('fetched config')
 				}
-				if (!activated) console.log('not activated')
 				return remoteConfig.getAll()
 			})
 			.then((config) => {
-				console.log(config)
 				const configJSON = config?.hero?.asString()
 				if (configJSON) {
 					const config = JSON.parse(configJSON)

@@ -65,7 +65,6 @@ const EmailSignupForm = ({ id, configId = '' }) => {
 				method="post"
 				target="_blank"
 			>
-				<input type="hidden" name="ml-submit" value="1" />
 				<input
 					id="email"
 					className={`form-control ml-0 w-full h-12 lg:h-auto sm:w-80 bg-white rounded-xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 sm:px-3 leading-8 transition-colors duration-200 ease-in-out`}
@@ -79,6 +78,7 @@ const EmailSignupForm = ({ id, configId = '' }) => {
 					required
 				/>
 				<input type="hidden" name="anticsrf" value="true" />
+				<input type="hidden" name="ml-submit" value="1" className="hidden" />
 				<InputButton name="Sign me up!"></InputButton>
 				<Popup
 					title={openSignupPopupConfig.title}

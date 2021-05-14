@@ -7,8 +7,9 @@ import LinkButton from '../components/shared/linkButton'
 import { useLayoutEffect, useState, useEffect, useContext } from 'react'
 import FirebaseContext from '../context/firebaseContext'
 import ConfigContext from '../context/configContext'
+// import styles from './index.module.css'
 
-import { SearchIcon } from '@heroicons/react/outline'
+// import Arrow, { DIRECTION } from 'react-arrows'
 
 export default function Home() {
 	const [arrows, setArrows] = useState<any>()
@@ -38,20 +39,33 @@ export default function Home() {
 		script.setAttribute('crossorigin', '*')
 		firstScript.parentNode.insertBefore(script, firstScript)
 
-		if (!arrows) {
-			setArrows(require('react-arrows'))
-		}
+		// import('react-arrows').then((result) => {
+		// 	const Arrow = result.default
+		// 	const direction = result.DIRECTION
+
+		// 	let arrow = (
+		// 		<Arrow
+		// 			className={styles.arrow}
+		// 			from={{
+		// 				direction: direction.TOP,
+		// 				node: () => document.getElementById('feature1'),
+		// 				translation: [-0.5, -1],
+		// 			}}
+		// 			to={{
+		// 				direction: direction.RIGHT,
+		// 				node: () => document.getElementById('feature2'),
+		// 				translation: [0.9, 1],
+		// 			}}
+		// 		/>
+		// 	)
+		// 	console.log('------------')
+		// 	setArrows(arrow)
+		// })
 
 		return () => {
 			script?.parentNode?.removeChild(script)
 		}
 	}, [])
-
-	function ml_webform_success_4083562() {
-		console.log('yaaaaaaaassss')
-		console.log('yaaaaaaaassss')
-		console.log('yaaaaaaaassss')
-	}
 
 	return (
 		<Layout>
