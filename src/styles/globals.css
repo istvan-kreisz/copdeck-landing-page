@@ -11,7 +11,8 @@
 }
 
 @layer base {
-	p {
+	p,
+	li {
 		@apply leading-relaxed text-gray-500 tracking-wider;
 	}
 

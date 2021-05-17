@@ -22,7 +22,7 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 
 	return (
 		<div>
-			<Meta></Meta>
+			<Meta title={frontmatter.title} description={frontmatter.description}></Meta>
 			<header className="container-default">
 				<div className="group cursor-pointer my-12">
 					<Link href="/blog">
@@ -40,18 +40,18 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 
 				<div className={styles.header}>
 					<img
-						className="object-fill w-full h-full rounded-3xl"
-						src={`/images/posts/${postname}/${postname}-large.jpg`}
+						className="object-cover w-full h-full rounded-3xl"
+						src={`/images/posts/${postname}/${postname}-large.png`}
 						alt="Article Photo"
 					/>
 					<div
 						style={{
-							backgroundColor: 'rgba(13, 28, 38, 0.88)',
+							backgroundColor: 'rgba(13, 28, 38, 0.75)',
 						}}
 						className="rounded-3xl absolute top-0 left-0 bottom-0 right-0"
 					></div>
 					<div className="absolute top-0 left-0 bottom-0 right-0 flex items-center justify-center">
-						<h1 className="text-gray-400 text-center text-2xl sm:text-3xl md:text-4xl font-bold p-10">
+						<h1 className="text-gray-200 text-center text-2xl sm:text-3xl md:text-4xl font-bold p-10 leading-loose">
 							{frontmatter?.title}
 						</h1>
 					</div>
@@ -120,40 +120,32 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 }
 
 export async function getStaticProps({ params }) {
-	// const { postname } = params
-	// const content = await import(`../../posts/${postname}.md`)
-	// if (!content) return { notFound: true }
-	// const data = matter(content.default)
-	// if (!data) return { notFound: true }
-	// return {
-	// 	props: {
-	// 		frontmatter: data.data,
-	// 		markdownBody: data.content,
-	// 		postname: postname,
-	// 	},
-	// }
-
-	return { notFound: true }
+	const { postname } = params
+	const content = await import(`../../posts/${postname}.md`)
+	if (!content) return { notFound: true }
+	const data = matter(content.default)
+	if (!data) return { notFound: true }
+	return {
+		props: {
+			frontmatter: data.data,
+			markdownBody: data.content,
+			postname: postname,
+		},
+	}
 }
 
 export async function getStaticPaths() {
-	// const blogSlugs = ((context) => {
-	// 	const keys = context.keys()
-	// 	const data = keys.map((key, index) => {
-	// 		let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
-	// 		return slug
-	// 	})
-	// 	return data
-	// })(require.context('../../posts', true, /\.md$/))
-	// const paths = blogSlugs?.map((slug) => `/posts/${slug}`) ?? []
-	// return {
-	// 	paths,
-	// 	fallback: false,
-	// }
-
-	// todo
+	const blogSlugs = ((context) => {
+		const keys = context.keys()
+		const data = keys.map((key, index) => {
+			let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
+			return slug
+		})
+		return data
+	})(require.context('../../posts', true, /\.md$/))
+	const paths = blogSlugs?.map((slug) => `/posts/${slug}`) ?? []
 	return {
-		paths: [],
+		paths,
 		fallback: false,
 	}
 }

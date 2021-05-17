@@ -13,7 +13,7 @@ const ArticleCard = (props) => {
 						<img
 							className="w-full object-cover object-center rounded-3xl justify-self-center"
 							alt="Post Preview"
-							src={'images/posts/' + props.slug + '/' + props.slug + '-thumbnail.jpg'}
+							src={'images/posts/' + props.slug + '/' + props.slug + '-thumbnail.png'}
 						/>
 						<div className="bg-theme-orange group-hover:bg-theme-orange-dark h-12 w-12 rounded-xl flex items-center absolute bottom-5 right-5">
 							<ArrowRightIcon
