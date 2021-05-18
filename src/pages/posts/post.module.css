@@ -54,7 +54,7 @@
 
 .article img {
 	display: block;
-	width: 70%;
+	width: 100%;
 	margin: 4rem auto;
 }
 
@@ -83,5 +83,9 @@
 @media (min-width: 768px) {
 	.header {
 		height: 30rem;
+	}
+
+	.article img {
+		width: 70%;
 	}
 }
