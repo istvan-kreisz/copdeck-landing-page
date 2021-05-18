@@ -70,7 +70,7 @@ export default function Home() {
 	return (
 		<Layout>
 			<section className="container-default mt-2 lg:mt-4">
-				<div className="relative space-x-12  w-full flex  md:flex-row flex-col items-center justify-around">
+				<div className="relative md:space-x-12  w-full flex md:flex-row flex-col items-center justify-around">
 					<div className="flex flex-col items-center lg:pr-48 justify-center order-2 md:order-first lg:flex-grow w-full">
 						<img
 							className="object-cover w-64  object-center rounded transform lg:-rotate-6"
@@ -96,7 +96,7 @@ export default function Home() {
 							</a>
 						</Link> */}
 					</div>
-					<div className="flex-shrink ml-4 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+					<div className="flex-shrink md:ml-4 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
 						<h1 className="mb-4">{remoteConfig?.title}</h1>
 						<p className="mb-12 sm:mb-20">{remoteConfig?.subtitle}</p>
 						<p className="text-xs font-medium text-gray-900 mb-3">
@@ -201,56 +201,62 @@ export default function Home() {
 					</p>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-8 sm:mt-24">
 						<div>
-							<blockquote className="twitter-tweet tw-align-center">
+							<blockquote className="twitter-tweet">
 								<p lang="en" dir="ltr">
-									A major part of real-world AI has to be solved to make
-									unsupervised, generalized full self-driving work, as the entire
-									road system is designed for biological neural nets with optical
-									imagers
+									<a href="https://twitter.com/CopDeck_?ref_src=twsrc%5Etfw">
+										@CopDeck_
+									</a>{' '}
+									could truly make life easier for sneakerheads. This app is on an
+									another level...🔥 can’t wait for the release
 								</p>
-								&mdash; Elon Musk (@elonmusk){' '}
-								<a href="https://twitter.com/elonmusk/status/1387901003664699392?ref_src=twsrc%5Etfw">
-									April 29, 2021
+								&mdash; Merényi Attila (@atimerenyi){' '}
+								<a href="https://twitter.com/atimerenyi/status/1393988632759910405?ref_src=twsrc%5Etfw">
+									May 16, 2021
 								</a>
 							</blockquote>{' '}
 						</div>
 						<div className="lg:mt-10 lg:ml-16 md:mt-5 md:ml-8">
-							<blockquote className="twitter-tweet tw-align-center">
+							<blockquote className="twitter-tweet">
 								<p lang="en" dir="ltr">
-									God is so good 😊 Today I am voting for the first time in my
-									life for the President of the United States, and it&#39;s for
-									someone I truly trust...me. 🇺🇸 🕊
+									For years now since I’m a sneaker reseller I’ve been watching
+									sneaker prices for hours daily just to make sure I sell for the
+									best price. I’ve been looking for assistance to find the right
+									site easily and finally there will be a solution finally. Cant
+									wait for{' '}
+									<a href="https://twitter.com/CopDeck_?ref_src=twsrc%5Etfw">
+										@CopDeck_
+									</a>{' '}
+									🔥
 								</p>
-								&mdash; ye (@kanyewest){' '}
-								<a href="https://twitter.com/kanyewest/status/1323641120778145792?ref_src=twsrc%5Etfw">
-									November 3, 2020
+								&mdash; Andras Kupcsik (@KupcsikAndras){' '}
+								<a href="https://twitter.com/KupcsikAndras/status/1394680917482946565?ref_src=twsrc%5Etfw">
+									May 18, 2021
 								</a>
 							</blockquote>{' '}
 						</div>
 						<div className="md:mt-2">
-							<blockquote className="twitter-tweet tw-align-center">
+							<blockquote className="twitter-tweet">
 								<p lang="en" dir="ltr">
-									God is so good 😊 Today I am voting for the first time in my
-									life for the President of the United States, and it&#39;s for
-									someone I truly trust...me. 🇺🇸 🕊
+									If I were you I would keep an eye out on{' '}
+									<a href="https://twitter.com/CopDeck_?ref_src=twsrc%5Etfw">
+										@CopDeck_
+									</a>
+									.👀 Their app will be a game changer🤫
 								</p>
-								&mdash; ye (@kanyewest){' '}
-								<a href="https://twitter.com/kanyewest/status/1323641120778145792?ref_src=twsrc%5Etfw">
-									November 3, 2020
+								&mdash; RichardH (@richard_honti){' '}
+								<a href="https://twitter.com/richard_honti/status/1394550586889195521?ref_src=twsrc%5Etfw">
+									May 18, 2021
 								</a>
 							</blockquote>{' '}
 						</div>
 						<div className="lg:mt-10 md:mt-5">
-							<blockquote className="twitter-tweet tw-align-center">
+							<blockquote class="twitter-tweet">
 								<p lang="en" dir="ltr">
-									A major part of real-world AI has to be solved to make
-									unsupervised, generalized full self-driving work, as the entire
-									road system is designed for biological neural nets with optical
-									imagers
+									WINNING IS THE ONLY OPTION
 								</p>
-								&mdash; Elon Musk (@elonmusk){' '}
-								<a href="https://twitter.com/elonmusk/status/1387901003664699392?ref_src=twsrc%5Etfw">
-									April 29, 2021
+								&mdash; ye (@kanyewest){' '}
+								<a href="https://twitter.com/kanyewest/status/1308383844404400128?ref_src=twsrc%5Etfw">
+									September 22, 2020
 								</a>
 							</blockquote>{' '}
 						</div>
