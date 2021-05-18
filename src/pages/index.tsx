@@ -250,7 +250,7 @@ export default function Home() {
 							</blockquote>{' '}
 						</div>
 						<div className="lg:mt-10 md:mt-5">
-							<blockquote class="twitter-tweet">
+							<blockquote className="twitter-tweet">
 								<p lang="en" dir="ltr">
 									WINNING IS THE ONLY OPTION
 								</p>
