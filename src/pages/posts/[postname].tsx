@@ -69,7 +69,6 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 					{typeof window !== 'undefined' ? (
 						<TwitterShareButton
 							title={frontmatter?.title}
-							via={'CopDeck'}
 							url={window ? window?.location?.href : ''}
 							resetButtonStyle={false}
 							className="focus:outline-none"

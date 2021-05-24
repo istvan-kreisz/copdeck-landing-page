@@ -16,7 +16,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://copdeck.com/posts/[postname]</loc>
+    <loc>https://copdeck.com/posts/post2</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://copdeck.com/posts/the_best_websites_to_sell_your_sneakers_in_europe</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>

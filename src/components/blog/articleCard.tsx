@@ -9,7 +9,7 @@ const ArticleCard = (props) => {
 		>
 			<Link href="/posts/[postname]" as={`/posts/${props.slug}`}>
 				<a aria-label={`post ${props.slug}`} className="max-w-xs sm:max-w-sm lg:max-w-md">
-					<div className="relative">
+					<div className="relative filter drop-shadow">
 						<img
 							className="w-full object-cover object-center rounded-3xl justify-self-center"
 							alt="Post Preview"
