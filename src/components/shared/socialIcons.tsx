@@ -40,9 +40,9 @@ const SocialIcons = ({
 
 	return (
 		<span className="inline-flex justify-center md:justify-start space-x-6">
-			{/* <a aria-label="Twitter" href={twitter} onClick={twitterClicked}>
+			<a aria-label="Twitter" href={twitter} onClick={twitterClicked}>
 				<img className="h-6" src="/images/twitter.svg" alt="Twitter Link" />
-			</a> */}
+			</a>
 			<a aria-label="Instagram" href={instagram} onClick={igClicked}>
 				<img className="h-6" src="/images/instagram.svg" alt="Instagram Link" />
 			</a>

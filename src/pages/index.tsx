@@ -203,15 +203,15 @@ export default function Home() {
 						<div>
 							<blockquote className="twitter-tweet">
 								<p lang="en" dir="ltr">
-									<a href="https://twitter.com/CopDeck_?ref_src=twsrc%5Etfw">
-										@CopDeck_
+									<a href="https://twitter.com/Cop_Deck?ref_src=twsrc%5Etfw">
+										@Cop_Deck
 									</a>{' '}
 									could truly make life easier for sneakerheads. This app is on an
 									another level...🔥 can’t wait for the release
 								</p>
 								&mdash; Merényi Attila (@atimerenyi){' '}
-								<a href="https://twitter.com/atimerenyi/status/1393988632759910405?ref_src=twsrc%5Etfw">
-									May 16, 2021
+								<a href="https://twitter.com/atimerenyi/status/1397465869974974464?ref_src=twsrc%5Etfw">
+									May 26, 2021
 								</a>
 							</blockquote>{' '}
 						</div>
@@ -221,31 +221,30 @@ export default function Home() {
 									For years now since I’m a sneaker reseller I’ve been watching
 									sneaker prices for hours daily just to make sure I sell for the
 									best price. I’ve been looking for assistance to find the right
-									site easily and finally there will be a solution finally. Cant
-									wait for{' '}
-									<a href="https://twitter.com/CopDeck_?ref_src=twsrc%5Etfw">
-										@CopDeck_
+									site easily and finally there will be a solution. Cant wait{' '}
+									<a href="https://twitter.com/Cop_Deck?ref_src=twsrc%5Etfw">
+										@Cop_Deck
 									</a>{' '}
 									🔥
 								</p>
 								&mdash; Andras Kupcsik (@KupcsikAndras){' '}
-								<a href="https://twitter.com/KupcsikAndras/status/1394680917482946565?ref_src=twsrc%5Etfw">
-									May 18, 2021
+								<a href="https://twitter.com/KupcsikAndras/status/1397547533589745671?ref_src=twsrc%5Etfw">
+									May 26, 2021
 								</a>
 							</blockquote>{' '}
 						</div>
 						<div className="md:mt-2">
 							<blockquote className="twitter-tweet">
 								<p lang="en" dir="ltr">
-									If I were you I would keep an eye out on{' '}
-									<a href="https://twitter.com/CopDeck_?ref_src=twsrc%5Etfw">
-										@CopDeck_
+									If I were you, I would keep an eye out on{' '}
+									<a href="https://twitter.com/Cop_Deck?ref_src=twsrc%5Etfw">
+										@Cop_Deck
 									</a>
-									.👀 Their app will be a game changer🤫
+									.👀 Their app will be a game changer.🤫
 								</p>
 								&mdash; RichardH (@richard_honti){' '}
-								<a href="https://twitter.com/richard_honti/status/1394550586889195521?ref_src=twsrc%5Etfw">
-									May 18, 2021
+								<a href="https://twitter.com/richard_honti/status/1397675488882171908?ref_src=twsrc%5Etfw">
+									May 26, 2021
 								</a>
 							</blockquote>{' '}
 						</div>

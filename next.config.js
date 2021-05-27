@@ -4,8 +4,8 @@ module.exports = {
 		title: 'Be on top of your sneaker game | CopDeck',
 		description:
 			"We've taken the guesswork out of buying and selling sneakers. Ditch the spreadsheet and hours of manual price comparisons. Maximize profits and save time. Manage and share your inventory with ease.",
-		twitterHandle: 'CopDeck_',
-		twitter: 'https://twitter.com/CopDeck_',
+		twitterHandle: 'Cop_Deck',
+		twitter: 'https://twitter.com/Cop_Deck',
 		instagram: 'https://www.instagram.com/copdeck/',
 		facebook: 'https://www.facebook.com/CopDeck',
 		twitterIK: 'https://www.twitter.com/IKreisz',

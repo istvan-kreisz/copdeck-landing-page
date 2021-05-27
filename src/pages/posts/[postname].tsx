@@ -71,6 +71,7 @@ export default function BlogPost({ frontmatter, markdownBody, postname }) {
 							title={frontmatter?.title}
 							url={window ? window?.location?.href : ''}
 							resetButtonStyle={false}
+							via={process.env.twitterHandle}
 							className="focus:outline-none"
 							beforeOnClick={() => {
 								firebase?.analytics().logEvent('twitter_share_clicked', {
