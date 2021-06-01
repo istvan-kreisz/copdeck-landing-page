@@ -91,6 +91,10 @@ export async function getStaticProps() {
 		return data
 	})(require.context('../posts', true, /\.md$/))
 
+	articles.sort((article1, article2) => {
+		return article1.frontmatter['index'] < article2.frontmatter['index'] ? 1 : -1
+	})
+
 	return {
 		props: {
 			articles: articles,

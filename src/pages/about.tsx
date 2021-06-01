@@ -71,7 +71,7 @@ export default function About() {
 						I first heard about sneakers being a thing when my little brother bought a
 						pair of Yeezys for around $500 and I thought he was out of his mind. Fast
 						forward a few years and here I am spending way more than I should on
-						sneakers and building a product for sneakerheads. Funny how things work
+						sneakers and building a product for sneakerheads. Funny how things worked
 						out...
 					</p>
 				</div>

@@ -3,6 +3,7 @@ title: 'The Best Websites To Sell Your Sneakers in Europe - Are Restocks, KLEKT,
 description: 'Thanks to the exponentially growing sneaker resale market that could reach 30$ billion by 2030, the number of places where sneaker enthusiasts can pick up their grails and resellers can flip their pairs are soaring.'
 tags: [sneakers, reselling]
 date: 'May 2021'
+index: 1
 ---
 
 # The Best Websites To Sell Your Sneakers in Europe - Are Restocks, KLEKT, StockX, GOAT Legit?

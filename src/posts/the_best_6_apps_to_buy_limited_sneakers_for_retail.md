@@ -3,6 +3,7 @@ title: 'The Best 6 Apps to Buy Limited Sneakers for Retail'
 description: 'When it comes to limited sneaker releases, you need two things to secure your grail. Luck or a bot, maybe even both. However, not everyone can afford to pay thousands of dollars for [sneaker bots](https://www.businessinsider.com/sneaker-bots-how-to-buy-make-and-run-the-tech-2021-1) and learn to use them properly. Luckily there are still some applications where regular people can stand a chance to cop sought-after pairs.'
 tags: [sneakers, reselling]
 date: 'May 2021'
+index: 2
 ---
 
 # The Best 6 Apps to Buy Limited Sneakers for Retail
